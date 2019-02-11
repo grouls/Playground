@@ -8,18 +8,14 @@ const Henlo = () => {
     <div className="wrapper">
       <div className="headerNav">
         <img className="birb" src={birb} alt="I'm a birb yo!" />
-        <span className="navItem_1">
-          <Link to="/about">React Router Magic</Link>
-        </span>
-        <span className="navItem_2">
-           Link 2
-        </span>
-        <span className="navItem_3">
-           Link 3
-        </span>
-        <span className="navItem_4">
-           Link 4
-        </span>
+        <div className="headerWrapper">
+          <div className="navItem">
+            <Link to="/about">React Router Magic</Link>
+          </div>
+          <div className="navItem"><a href="#">Link 2</a></div>
+          <div className="navItem"><a href="#">Link 3</a></div>
+          <div className="navItem"><a href="#">Link 4</a></div>
+        </div>
       </div>
       <div className="contentBox_1">
         <p className="header">henlo</p>
