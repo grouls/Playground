@@ -13,7 +13,7 @@
   background-color: #2b333c;
   line-height: 70px; // same height as grid template specification, allows us to use vertical-align targeting
 
-  // I'm a grid in the header...the header is also within a main grid along with the content and footer!
+  //NESTED GRID:  I'm a grid in the header...the header is also within a main grid along with the content and footer!
   .headerWrapper {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -36,10 +36,9 @@
   }
 }
 
-.contentBox_1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
+.contentBox{
   background-color: whitesmoke;
+  box-shadow: 2px 2px 6px #aaaaaa;
   border-radius: 40px;
   margin: 15px;
   .header {
@@ -50,38 +49,21 @@
   .content {
     margin-left: 10px;
   }
+}
+
+.contentBox_1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .contentBox_2 {
   grid-column-start: 3;
   grid-column-end: 5;
-  background-color: whitesmoke;
-  margin: 15px;
-  border-radius: 40px;
-  .header {
-    text-align: center;
-    text-transform: uppercase;
-    color: goldenrod;
-  }
-  .content {
-    margin-left: 10px;
-  }
 }
 
 .footer {
   grid-column-start: 1;
   grid-column-end: 5;
-  background-color: whitesmoke;
-  margin: 15px;
-  border-radius: 40px;
-  .header {
-    text-align: center;
-    text-transform: uppercase;
-    color: goldenrod;
-  }
-  .content {
-    margin-left: 10px;
-  }
 }
 
 .birb {

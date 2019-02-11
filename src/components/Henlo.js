@@ -17,15 +17,15 @@ const Henlo = () => {
           <div className="navItem"><a href="#">Link 4</a></div>
         </div>
       </div>
-      <div className="contentBox_1">
+      <div className="contentBox contentBox_1">
         <p className="header">henlo</p>
         <p className="content">Welcome to the JoeFads playground!</p>
       </div>
-      <div className="contentBox_2">
+      <div className="contentBox contentBox_2">
         <p className="header">heck'n birb info</p>
         <p className="content">All things birbs!</p>
       </div>
-      <div className="footer">
+      <div className="contentBox footer">
         <p className="header">birb footer</p>
         <p className="content">I'm the footer!</p>
       </div>
