@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import './App.css';
+import React     from "react";
+import { Route } from "react-router-dom";
+import  Henlo    from "./Henlo";
+import About     from "./About";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <p>Henlo</p>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Route exact path="/" component={Henlo} />
+    <Route exact path="/about" component={About} />
+  </div>
+);
 
 export default App;
