@@ -2,12 +2,14 @@ import React from "react";
 import birb from "../assets/images/birb.gif";
 import react from "../assets/images/react.png";
 import redux from "../assets/images/redux.png";
+import cssGrid from "../assets/images/cssgrid.png";
 import reactRouter from "../assets/images/reactRouter.png";
 
 import { Link } from "react-router-dom";
 import "../assets/styles/henlo.scss";
 
-const Henlo = () => {
+const Henlo = (props) => {
+  // const text = props.showing ? 'Hide' : 'Show';
   return (
     <div className="wrapper">
       <div className="headerNav">
@@ -40,17 +42,23 @@ const Henlo = () => {
           </div>
           <div className="react_router">
             <img src={reactRouter} alt="redux" />
-            <p>React Router (react-router-dom)</p>
+            <p>React Router</p>
           </div>
           <div className="redux">
             <img src={redux} alt="redux" />
             <p>Redux</p>
           </div>
+          <div className="redux">
+            <img src={cssGrid} alt="redux" />
+            <p>CSS Grid</p>
+          </div>
         </div>
       </div>
       <div className="contentBox contentBox_2">
-        <h2 className="header">heck'n birb info</h2>
-        <p className="content">All things birbs!</p>
+        <h2 className="header">heck'n birbs</h2>
+        <div className="intro">
+          {/* <button onClick={this.props.showBirb()}>{text} birb</button> */}
+        </div>
       </div>
       <div className="contentBox footer">
         <h2 className="header">birb footer</h2>

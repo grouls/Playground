@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 70px 80% auto;
+  grid-template-rows: 70px 70% auto;
   font-weight: bold;
   width: 100vw;
   height: 100vh;
@@ -46,42 +46,37 @@
   grid-column-end: 5;
 }
 
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
 
 .contentBox {
   background-color: whitesmoke;
   box-shadow: 2px 2px 6px #aaaaaa;
   border-radius: 40px;
   margin: 15px;
-  padding-left:40px;
+  overflow: auto;
   .header {
     text-align: center;
     text-transform: uppercase;
     color: goldenrod;
-    grid-column-start: 1;
-    grid-column-end: 5;
   }
-  .intro{
-    grid-column-start: 1;
-    grid-column-end: 5;
+  .intro {
+    padding-left: 40px;
   }
   .tools {
-    grid-column-start: 1;
-    grid-column-end: 5;
+    padding-left: 40px;
     img {
       height: 30px;
       width: 30px;
-      float:left;
+      float: left;
     }
     p {
       padding-left: 40px;
       padding-top: 8px;
     }
   }
-}
-
-.footer {
-  grid-column-start: 1;
-  grid-column-end: 5;
 }
 
 .birb {
@@ -92,4 +87,18 @@
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
+}
+
+@media only screen and (max-width: 715px) {
+  .wrapper {
+    grid-template-rows: 70px 400px 400px 149px;
+  }
+  .contentBox_1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .contentBox_2 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
 }
