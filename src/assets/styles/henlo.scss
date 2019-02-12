@@ -46,9 +46,15 @@
   grid-column-end: 5;
 }
 
+.contentBoxAbout {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
 .footer {
   grid-column-start: 1;
   grid-column-end: 5;
+  padding-left: 40px;
 }
 
 .contentBox {
@@ -102,3 +108,4 @@
     grid-column-end: 5;
   }
 }
+

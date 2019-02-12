@@ -10,6 +10,8 @@ import "../assets/styles/henlo.scss";
 
 const Henlo = (props) => {
   // const text = props.showing ? 'Hide' : 'Show';
+  console.log(props);
+  
   return (
     <div className="wrapper">
       <div className="headerNav">
