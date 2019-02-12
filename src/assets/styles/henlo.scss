@@ -99,6 +99,15 @@
   margin-left: 10px;
 }
 
+.bigBirb {
+  border-radius: 30px;
+  height: 200px;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
 @media only screen and (max-width: 715px) {
   .wrapper {
     grid-template-rows: 70px 400px 400px 149px;
@@ -112,7 +121,6 @@
     grid-column-end: 5;
   }
 }
-
 
 button {
   outline: none;

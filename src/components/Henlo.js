@@ -1,14 +1,16 @@
-import React from "react";
-import birb from "../assets/images/birb.gif";
-import react from "../assets/images/react.png";
-import redux from "../assets/images/redux.png";
-import cssGrid from "../assets/images/cssgrid.png";
+import React       from "react";
+import birb        from "../assets/images/birb.gif";
+import beerBirb    from "../assets/images/beerBirb.gif";
+import react       from "../assets/images/react.png";
+import redux       from "../assets/images/redux.png";
+import cssGrid     from "../assets/images/cssgrid.png";
 import reactRouter from "../assets/images/reactRouter.png";
 
 import { Link } from "react-router-dom";
 import "../assets/styles/henlo.scss";
 
 const Henlo = (props) => {
+  
   const displayHelper = () => {
     const showBirbs = !props.showTheBirbs;
     props.displayBirbs(showBirbs);
@@ -63,8 +65,13 @@ const Henlo = (props) => {
       <div className="contentBox contentBox_2">
         <h2 className="header">heck'n birbs</h2>
         <div className="intro">
-          <button className="birbButton" onClick={displayHelper}>{birbDisplayText} the birbs</button>
+          <button className="birbButton" onClick={displayHelper}>{birbDisplayText} the birb!</button>
         </div>
+        { props.showTheBirbs ? 
+        <div className="birbPics">
+          <img src={beerBirb} className="bigBirb" alt="henlo you birb!" />
+        </div> : null 
+        }
       </div>
       <div className="contentBox footer">
         <h2 className="header">birb footer</h2>
