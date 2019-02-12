@@ -68,6 +68,7 @@
   margin: 20px;
   padding-top: 10px;
   overflow: auto;
+
   .header {
     text-align: center;
     text-transform: uppercase;
@@ -108,16 +109,16 @@
 
   .bigBirb {
     border-radius: 30px;
-    height: 200px;
-    width: 300px;
+    height: 300px;
+    width: 400px;
     margin-top: 20px;
     margin-bottom: 5px;
   }
   
   .flowBirb {
     border-radius: 30px;
-    height: 200px;
-    width: 300px;
+    height: 300px;
+    width: 400px;
     margin-top: 20px;
     margin-bottom: 5px;
   }
@@ -198,20 +199,6 @@
   }
 }
 
-@media only screen and (max-width: 715px) {
-  .wrapper {
-    grid-template-rows: 70px 400px 400px 149px;
-  }
-  .contentBox_1 {
-    grid-column-start: 1;
-    grid-column-end: 5;
-  }
-  .contentBox_2 {
-    grid-column-start: 1;
-    grid-column-end: 5;
-  }
-}
-
 .birbButton {
   margin-top: 30px;
   margin-bottom: 15px;
@@ -243,3 +230,47 @@ button:active {
   box-shadow: none;
   top: 6px;
 }
+
+@media only screen and (max-width: 715px) {
+  .wrapper {
+    grid-template-rows: 70px 400px 400px 149px;
+  }
+  .contentBox_1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .contentBox_2 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .birbPics {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    justify-items: center;
+  
+    .bigBirb {
+      border-radius: 30px;
+      height: 300px;
+      width: 400px;
+      margin-top: 20px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+    
+    .flowBirb {
+      border-radius: 30px;
+      height: 300px;
+      width: 400px;
+      padding-bottom: 30px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+}
+
+
+
