@@ -1,7 +1,7 @@
 import React     from "react";
 import { Route } from "react-router-dom";
 import  Henlo    from "../redux/containers/birbContainer";
-import About     from "./About";
+import About     from "../redux/containers/birbAboutContainer";
 
 const App = () => (
   <div>
