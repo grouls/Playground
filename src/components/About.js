@@ -14,6 +14,7 @@ class About extends Component {
 
   getRows = () => {
     return this.props.birbList.map(birb => (
+
       <div className="birbInfoContainer">
         <div className="infoBox">
           <img className="mrBirb" src={mrBirb} alt="I'm a birb yo!" />
@@ -35,6 +36,7 @@ class About extends Component {
           </p>
         </div>
       </div>
+      
     ));
   };
 
@@ -42,6 +44,7 @@ class About extends Component {
     const birbRows = this.getRows();
     return (
       <div className="wrapper">
+      
         <div className="headerNav">
           <img className="birb" src={birb} alt="I'm a birb yo!" />
           <div className="headerWrapper">

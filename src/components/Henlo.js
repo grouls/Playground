@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import "../assets/styles/henlo.scss";
 
 const Henlo = props => {
+  
   const displayHelper = () => {
     const showBirbs = !props.showTheBirbs;
     props.displayBirbs(showBirbs);
@@ -20,6 +21,7 @@ const Henlo = props => {
 
   return (
     <div className="wrapper">
+    
       <div className="headerNav">
         <img className="birb" src={birb} alt="I'm a birb yo!" />
         <div className="headerWrapper">
@@ -37,6 +39,7 @@ const Henlo = props => {
           </div>
         </div>
       </div>
+
       <div className="contentBox contentBox_1">
         <h2 className="header">henlo</h2>
         <div className="intro">
