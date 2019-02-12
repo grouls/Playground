@@ -9,9 +9,13 @@ import { Link } from "react-router-dom";
 import "../assets/styles/henlo.scss";
 
 const Henlo = (props) => {
-  // const text = props.showing ? 'Hide' : 'Show';
-  console.log(props);
+  const displayHelper = () => {
+    const showBirbs = !props.showTheBirbs;
+    props.displayBirbs(showBirbs);
+  }
   
+  const birbDisplayText = props.showTheBirbs ? 'Hide' : 'Show';
+
   return (
     <div className="wrapper">
       <div className="headerNav">
@@ -38,7 +42,7 @@ const Henlo = (props) => {
           <p>This was built from scratch to act as a lightweight example using: </p>
         </div>
         <div className="tools">
-          <div className="react">
+        <div className="react">
             <img src={react} alt="redux" />
             <p>React</p>
           </div>
@@ -59,7 +63,7 @@ const Henlo = (props) => {
       <div className="contentBox contentBox_2">
         <h2 className="header">heck'n birbs</h2>
         <div className="intro">
-          {/* <button onClick={this.props.showBirb()}>{text} birb</button> */}
+          <button className="birbButton" onClick={displayHelper}>{birbDisplayText} the birbs</button>
         </div>
       </div>
       <div className="contentBox footer">

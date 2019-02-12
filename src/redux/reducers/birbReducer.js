@@ -1,8 +1,8 @@
-export default (state = {}, action) => {
-    switch (action.type) {
-     case 'DISPLAY_BIRBS':
+export default (state = false, {value, type}) => {
+    switch (type) {
+     case 'SHOW_THE_BIRBS':
       return {
-       result: action.value
+        value
       }
      default:
       return state

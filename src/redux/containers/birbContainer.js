@@ -3,9 +3,8 @@ import { connect }            from 'react-redux';
 import Henlo                  from '../../components/Henlo';
 import * as actions           from '../actions/birbActions';
 
-
 export const mapStateToProps = state => ({
-  displayBirbs : state
+  showTheBirbs : state.showTheBirbs.value
 });
 
 export const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);

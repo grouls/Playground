@@ -1,6 +1,6 @@
 export const displayBirbs = value => dispatch => {
   dispatch({
-    type: "DISPLAY_BIRBS",
+    type: "SHOW_THE_BIRBS",
     value
   });
 };

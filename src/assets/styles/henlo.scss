@@ -44,6 +44,10 @@
 .contentBox_2 {
   grid-column-start: 3;
   grid-column-end: 5;
+  .info{
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
 }
 
 .contentBoxAbout {
@@ -109,3 +113,29 @@
   }
 }
 
+
+button {
+  outline: none;
+  border: none;
+  background-color: #2b333c;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 6px goldenrod;
+  color: white;
+  height: 50px;
+  width: 150px;
+}
+
+button:hover {
+  box-shadow: 0 4px goldenrod;
+  top: 2px;
+}
+
+button:active {
+  box-shadow: none;
+  top: 6px;
+}
