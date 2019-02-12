@@ -100,14 +100,30 @@
   margin-left: 10px;
 }
 
-.bigBirb {
-  border-radius: 30px;
-  height: 200px;
-  width: 300px;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  margin-left: 30px;
+.birbPics {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  justify-items: center;
+
+  .bigBirb {
+    border-radius: 30px;
+    height: 300px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .flowBirb {
+    border-radius: 30px;
+    height: 300px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
 }
+
+
 
 .mrBirb {
   border-radius: 15px;

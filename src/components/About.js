@@ -46,10 +46,10 @@ class About extends Component {
           <img className="birb" src={birb} alt="I'm a birb yo!" />
           <div className="headerWrapper">
             <div className="navItem">
-              <Link to="/about">React Router Magic</Link>
+              <Link to="/home">Home</Link>
             </div>
             <div className="navItem">
-              <a href="#">Link 2</a>
+              <Link to="/about">About</Link>
             </div>
             <div className="navItem">
               <a href="#">Link 3</a>

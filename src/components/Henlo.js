@@ -5,18 +5,18 @@ import react       from "../assets/images/react.png";
 import redux       from "../assets/images/redux.png";
 import cssGrid     from "../assets/images/cssgrid.png";
 import reactRouter from "../assets/images/reactRouter.png";
+import flowdiagram  from "../assets/images/flowdiagram.png";
 
 import { Link } from "react-router-dom";
 import "../assets/styles/henlo.scss";
 
-const Henlo = (props) => {
-  
+const Henlo = props => {
   const displayHelper = () => {
     const showBirbs = !props.showTheBirbs;
     props.displayBirbs(showBirbs);
-  }
-  
-  const birbDisplayText = props.showTheBirbs ? 'Hide' : 'Show';
+  };
+
+  const birbDisplayText = props.showTheBirbs ? "Hide" : "Show";
 
   return (
     <div className="wrapper">
@@ -24,10 +24,10 @@ const Henlo = (props) => {
         <img className="birb" src={birb} alt="I'm a birb yo!" />
         <div className="headerWrapper">
           <div className="navItem">
-            <Link to="/about">React Router Magic</Link>
+            <Link to="/home">Home</Link>
           </div>
           <div className="navItem">
-            <a href="#">Link 2</a>
+            <Link to="/about">About</Link>
           </div>
           <div className="navItem">
             <a href="#">Link 3</a>
@@ -44,7 +44,7 @@ const Henlo = (props) => {
           <p>This was built from scratch to act as a lightweight example using: </p>
         </div>
         <div className="tools">
-        <div className="react">
+          <div className="react">
             <img src={react} alt="redux" />
             <p>React</p>
           </div>
@@ -65,13 +65,20 @@ const Henlo = (props) => {
       <div className="contentBox contentBox_2">
         <h2 className="header">heck'n birbs</h2>
         <div className="intro">
-          <button className="birbButton" onClick={displayHelper}>{birbDisplayText} the birb!</button>
+          <p>
+          A simple hide / show example to demonstrate dispatching an action from a prop passed to this component, 
+          updating state and triggering component to render again.
+          </p>
+          <button className="birbButton" onClick={displayHelper}>
+            {birbDisplayText} the birb!
+          </button>
         </div>
-        { props.showTheBirbs ? 
-        <div className="birbPics">
-          <img src={beerBirb} className="bigBirb" alt="henlo you birb!" />
-        </div> : null 
-        }
+        {props.showTheBirbs ? (
+          <div className="birbPics">
+            <img src={beerBirb} className="bigBirb" alt="henlo you birb!" />
+            <img src={flowdiagram} className="flowBirb" alt="henlo you birb!" />
+          </div>
+        ) : null}
       </div>
       <div className="contentBox footer">
         <h2 className="header">birb footer</h2>
