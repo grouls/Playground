@@ -109,16 +109,16 @@
 
   .bigBirb {
     border-radius: 30px;
-    height: 300px;
-    width: 400px;
+    height: 200px;
+    width: 300px;
     margin-top: 20px;
     margin-bottom: 5px;
   }
   
   .flowBirb {
     border-radius: 30px;
-    height: 300px;
-    width: 400px;
+    height: 200px;
+    width: 300px;
     margin-top: 20px;
     margin-bottom: 5px;
   }
@@ -245,7 +245,7 @@ button:active {
   }
 }
 
-@media only screen and (max-width: 1700px) {
+@media only screen and (max-width: 980px) {
   .birbPics {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -254,8 +254,8 @@ button:active {
   
     .bigBirb {
       border-radius: 30px;
-      height: 300px;
-      width: 400px;
+      height: 250px;
+      width: 350px;
       margin-top: 20px;
       grid-column-start: 1;
       grid-column-end: 5;
@@ -263,8 +263,31 @@ button:active {
     
     .flowBirb {
       border-radius: 30px;
-      height: 300px;
-      width: 400px;
+      height: 250px;
+      width: 350px;
+      padding-bottom: 30px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+}
+
+@media only screen and (max-width: 1330px) {
+  
+  .birbPics {
+    .bigBirb {
+      border-radius: 30px;
+      height: 200px;
+      width: 300px;
+      margin-top: 20px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+    
+    .flowBirb {
+      border-radius: 30px;
+      height: 200px;
+      width: 300px;
       padding-bottom: 30px;
       grid-column-start: 1;
       grid-column-end: 5;
