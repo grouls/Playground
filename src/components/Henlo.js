@@ -73,8 +73,8 @@ const Henlo = props => {
         </div>
         <div className="imageContainer">
           {props.showTheBirbs ? (
-            <div className="bigBirbContainer">
-              <img src={beerBirb} className="bigBirb" alt="henlo you birb!" />
+            <div className="beerBirbContainer">
+              <img src={beerBirb} className="beerBirb" alt="henlo you birb!" />
             </div>
           ) : null}
         </div>

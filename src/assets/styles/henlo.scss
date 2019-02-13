@@ -72,15 +72,19 @@
 
   .imageContainer {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto;
     justify-items: start;
 
-    .bigBirb {
+    .beerBirb {
       border-radius: 30px;
       height: 200px;
       width: 300px;
       margin: 20px 40px 40px 40px;
+    }
+
+    .infoContainer{
+      justify-self: center;
     }
   }
 }
@@ -131,7 +135,7 @@
     grid-template-rows: auto;
     justify-items: center;
 
-    .bigBirb {
+    .beerBirb {
       border-radius: 30px;
       height: 250px;
       width: 350px;
@@ -144,7 +148,7 @@
 
 @media only screen and (max-width: 1330px) {
   .birbPics {
-    .bigBirb {
+    .beerBirb {
       border-radius: 30px;
       height: 200px;
       width: 300px;
