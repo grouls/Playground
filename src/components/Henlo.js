@@ -1,17 +1,16 @@
-import React       from "react";
-import birb        from "../assets/images/birb.gif";
-import beerBirb    from "../assets/images/beerBirb.gif";
-import react       from "../assets/images/react.png";
-import redux       from "../assets/images/redux.png";
-import cssGrid     from "../assets/images/cssgrid.png";
+import React from "react";
+import birb from "../assets/images/birb.gif";
+import beerBirb from "../assets/images/beerBirb.gif";
+import react from "../assets/images/react.png";
+import redux from "../assets/images/redux.png";
+import cssGrid from "../assets/images/cssgrid.png";
 import reactRouter from "../assets/images/reactRouter.png";
-import flowdiagram  from "../assets/images/flowdiagram.png";
+import flowdiagram from "../assets/images/flowdiagram.png";
 
 import { Link } from "react-router-dom";
 import "../assets/styles/henlo.scss";
 
 const Henlo = props => {
-  
   const displayHelper = () => {
     const showBirbs = !props.showTheBirbs;
     props.displayBirbs(showBirbs);
@@ -21,7 +20,6 @@ const Henlo = props => {
 
   return (
     <div className="wrapper">
-    
       <div className="headerNav">
         <img className="birb" src={birb} alt="I'm a birb yo!" />
         <div className="headerWrapper">
@@ -46,20 +44,20 @@ const Henlo = props => {
           <p>Welcome to the JoeFads playground!</p>
           <p>This was built from scratch to act as a lightweight example using: </p>
         </div>
-        <div className="tools">
-          <div className="react">
+        <div className="techContainer">
+          <div className="react techGrid">
             <img src={react} alt="redux" />
             <p>React</p>
           </div>
-          <div className="react_router">
+          <div className="react_router techGrid">
             <img src={reactRouter} alt="redux" />
             <p>React Router</p>
           </div>
-          <div className="redux">
+          <div className="redux techGrid">
             <img src={redux} alt="redux" />
             <p>Redux</p>
           </div>
-          <div className="redux">
+          <div className="redux techGrid">
             <img src={cssGrid} alt="redux" />
             <p>CSS Grid</p>
           </div>
@@ -68,20 +66,22 @@ const Henlo = props => {
       <div className="contentBox contentBox_2">
         <h2 className="header">heck'n birbs</h2>
         <div className="intro">
-          <p>
-          A simple hide / show example to demonstrate dispatching an action from a prop passed to this component, 
-          updating state and triggering component to render again.
-          </p>
+          <p>A simple hide / show example to demonstrate dispatching an action from a prop passed to this component, updating state and triggering component to render again.</p>
           <button className="birbButton" onClick={displayHelper}>
-            {birbDisplayText} the birb!
+            {birbDisplayText} birb!
           </button>
         </div>
-        {props.showTheBirbs ? (
-          <div className="birbPics">
-            <img src={beerBirb} className="bigBirb" alt="henlo you birb!" />
-            <img src={flowdiagram} className="flowBirb" alt="henlo you birb!" />
-          </div>
-        ) : null}
+        <div className="imageContainer">
+          {props.showTheBirbs ? (
+            <div className="bigBirbContainer">
+              <img src={beerBirb} className="bigBirb" alt="henlo you birb!" />
+            </div>
+          ) : (
+            <div className="flowDiagramContainer">
+              <img src={flowdiagram} className="flowDiagram" alt="henlo you birb!" />
+            </div>
+          )}
+        </div>
       </div>
       <div className="contentBox footer">
         <h2 className="header">birb footer</h2>

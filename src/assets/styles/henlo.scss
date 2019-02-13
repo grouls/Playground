@@ -39,14 +39,56 @@
 .contentBox_1 {
   grid-column-start: 1;
   grid-column-end: 3;
+  .techContainer {
+    .techGrid {
+      display: grid;
+      grid-template-columns: 50px auto;
+      grid-template-rows: auto;
+      padding-left: 40px;
+      padding-top: 15px;
+      img {
+        height: 40px;
+        width: 40px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding-top: 7px;
+        margin: 0 auto;
+      }
+      p {
+        padding-left: 20px;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        justify-self: start;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
 }
 
 .contentBox_2 {
   grid-column-start: 3;
   grid-column-end: 5;
-  .info {
-    grid-column-start: 4;
-    grid-column-end: 5;
+
+  .imageContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    justify-items: start;
+
+    .flowDiagram {
+      height: 200px;
+      width: 300px;
+      margin: 20px 40px 40px 40px;
+      border-radius: 30px;
+      transition: transform 0.6s; /* Animation */
+    }
+    .bigBirb {
+      border-radius: 30px;
+      height: 200px;
+      width: 300px;
+      margin: 20px 40px 40px 40px;
+    }
   }
 }
 
@@ -77,18 +119,6 @@
   .intro {
     padding-left: 40px;
   }
-  .tools {
-    padding-left: 40px;
-    img {
-      height: 30px;
-      width: 30px;
-      float: left;
-    }
-    p {
-      padding-left: 40px;
-      padding-top: 8px;
-    }
-  }
 }
 
 .birb {
@@ -101,30 +131,36 @@
   margin-left: 10px;
 }
 
-.birbPics {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  justify-items: center;
+@media only screen and (max-width: 980px) {
+  .birbPics {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    justify-items: center;
 
-  .bigBirb {
-    border-radius: 30px;
-    height: 200px;
-    width: 300px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-  }
-  
-  .flowBirb {
-    border-radius: 30px;
-    height: 200px;
-    width: 300px;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    .bigBirb {
+      border-radius: 30px;
+      height: 250px;
+      width: 350px;
+      margin-top: 20px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
   }
 }
 
-
+@media only screen and (max-width: 1330px) {
+  .birbPics {
+    .bigBirb {
+      border-radius: 30px;
+      height: 200px;
+      width: 300px;
+      margin-top: 20px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+}
 
 .mrBirb {
   border-radius: 15px;
@@ -175,12 +211,12 @@
 
 .birbInfoContainer {
   justify-self: start;
-  margin-top:30px;
-  margin-left:30px;
+  margin-top: 30px;
+  margin-left: 30px;
   .infoBox {
     display: grid;
     grid-template-columns: 40px auto;
-    .mrBirb{
+    .mrBirb {
       justify-self: center;
       margin-top: 13px;
     }
@@ -200,8 +236,7 @@
 }
 
 .birbButton {
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 button {
@@ -216,7 +251,7 @@ button {
   text-transform: uppercase;
   box-shadow: 0 6px goldenrod;
   color: white;
-  height: 50px;
+  height: 40px;
   width: 150px;
   cursor: pointer;
 }
@@ -245,55 +280,24 @@ button:active {
   }
 }
 
-@media only screen and (max-width: 980px) {
-  .birbPics {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    justify-items: center;
-  
-    .bigBirb {
-      border-radius: 30px;
-      height: 250px;
-      width: 350px;
-      margin-top: 20px;
-      grid-column-start: 1;
-      grid-column-end: 5;
+@media only screen and (min-width: 950px) {
+  .contentBox_2 {
+    .imageContainer {
+      .flowDiagram {
+        height: 200px;
+        width: 300px;
+        margin: 20px 40px 40px 40px;
+        border-radius: 30px;
+        transition: transform 0.6s; /* Animation */
+      }
     }
-    
-    .flowBirb {
-      border-radius: 30px;
-      height: 250px;
-      width: 350px;
-      padding-bottom: 30px;
-      grid-column-start: 1;
-      grid-column-end: 5;
+    .flowDiagram:hover {
+      height: 80%;
+      width: 80%;
+      transition: width 1s ease;
+      cursor: -moz-zoom-in;
+      cursor: -webkit-zoom-in;
+      cursor: zoom-in;
     }
   }
 }
-
-@media only screen and (max-width: 1330px) {
-  
-  .birbPics {
-    .bigBirb {
-      border-radius: 30px;
-      height: 200px;
-      width: 300px;
-      margin-top: 20px;
-      grid-column-start: 1;
-      grid-column-end: 5;
-    }
-    
-    .flowBirb {
-      border-radius: 30px;
-      height: 200px;
-      width: 300px;
-      padding-bottom: 30px;
-      grid-column-start: 1;
-      grid-column-end: 5;
-    }
-  }
-}
-
-
-
