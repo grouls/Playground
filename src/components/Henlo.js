@@ -76,11 +76,7 @@ const Henlo = props => {
             <div className="bigBirbContainer">
               <img src={beerBirb} className="bigBirb" alt="henlo you birb!" />
             </div>
-          ) : (
-            <div className="flowDiagramContainer">
-              <img src={flowdiagram} className="flowDiagram" alt="henlo you birb!" />
-            </div>
-          )}
+          ) : null}
         </div>
       </div>
       <div className="contentBox footer">
