@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import loadingBirb          from "../assets/images/loading.gif";
+import loadingBirb          from "../../assets/images/loading.gif";
 import InfoBox              from "./InfoBox";
-import UsernameInfoBox      from "./UsernameInfoBox";
+import ImageInfoBox         from "./ImageInfoBox";
 
 class About extends Component {
   componentDidMount() {
@@ -12,7 +12,7 @@ class About extends Component {
   getRows = () => {
     return this.props.birbList.map(birb => (
       <div className="birbInfoContainer">
-        <UsernameInfoBox type="user" value={birb.username} />
+        <ImageInfoBox type="user" value={birb.username} />
         <InfoBox type="name" value={birb.name} />
         <InfoBox type="phone" value={birb.phone} />
       </div>

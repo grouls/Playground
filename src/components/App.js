@@ -2,9 +2,10 @@ import React     from "react";
 import { Route } from "react-router-dom";
 import  Henlo    from "../redux/containers/birbContainer";
 import About     from "../redux/containers/birbAboutContainer";
-import Tasks     from "./Tasks";
-import Header    from "./Header";
-import Footer    from "./Footer";
+import Tasks     from "./tasks";
+import Header    from "./nav/Header";
+import Footer    from "./nav/Footer";
+import "../assets/styles/henlo.scss";
 
 const App = () => (
   <div>

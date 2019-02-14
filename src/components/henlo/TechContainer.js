@@ -1,9 +1,9 @@
-import React from "react";
-import react from "../assets/images/react.png";
-import redux from "../assets/images/redux.png";
-import cssGrid from "../assets/images/cssgrid.png";
-import reactRouter from "../assets/images/reactRouter.png";
-import TechItem from "./TechItem";
+import React       from "react";
+import react       from "../../assets/images/react.png";
+import redux       from "../../assets/images/redux.png";
+import cssGrid     from "../../assets/images/cssgrid.png";
+import reactRouter from "../../assets/images/reactRouter.png";
+import TechItem    from "./TechItem";
 
 const techConfig = [
   {

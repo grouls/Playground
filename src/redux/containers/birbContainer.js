@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
-import Henlo                  from '../../components/Henlo';
+import Henlo                  from '../../components/henlo';
 import * as actions           from '../actions/birbActions';
 
 export const mapStateToProps = state => ({

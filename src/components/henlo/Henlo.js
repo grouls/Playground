@@ -1,5 +1,5 @@
 import React         from "react";
-import beerBirb      from "../assets/images/beerBirb.gif";
+import beerBirb      from "../../assets/images/beerBirb.gif";
 import { Link }      from "react-router-dom";
 import TechContainer from "./TechContainer";
 

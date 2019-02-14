@@ -1,5 +1,5 @@
-import React from "react";
-import mrBirb from "../assets/images/mrBirb.jpg";
+import React  from "react";
+import mrBirb from "../../assets/images/mrBirb.jpg";
 
 const UsernameInfoBox = ({type, value}) => (
   <div className="infoBox">

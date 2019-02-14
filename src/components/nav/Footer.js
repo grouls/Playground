@@ -1,5 +1,4 @@
 import React from "react";
-import "../assets/styles/henlo.scss";
 
 const Footer = () => (
   <div className="contentBox footer">
