@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link }             from "react-router-dom";
-import birb                 from "../assets/images/birb.gif";
-import loadingBirb          from "../assets/images/loading.gif";
-import mrBirb               from "../assets/images/mrBirb.jpg";
+import { Link } from "react-router-dom";
+import birb from "../assets/images/birb.gif";
+import loadingBirb from "../assets/images/loading.gif";
+import mrBirb from "../assets/images/mrBirb.jpg";
 import "../assets/styles/henlo.scss";
 
 class About extends Component {
@@ -14,29 +14,27 @@ class About extends Component {
 
   getRows = () => {
     return this.props.birbList.map(birb => (
-
       <div className="birbInfoContainer">
         <div className="infoBox">
-          <img className="mrBirb" src={mrBirb} alt="I'm a birb yo!" />
-          <p className="infoText username">
-            <span className="infoType">Username: </span>
-            {birb.username}
-          </p>
+          <div className="usernameDetails">
+            <img className="mrBirb" src={mrBirb} alt="I'm a birb yo!" />
+            <p className="infoText username">User:</p>
+            <p className="infoDetails username">{birb.username}</p>
+          </div>
         </div>
         <div className="infoBox">
-          <p className="infoText name">
-            <span className="infoType">Name: </span>
-            {birb.name}
-          </p>
+          <div className="details">
+            <p className="infoText name">Name:</p>
+            <p className="infoDetails name">{birb.name}</p>
+          </div>
         </div>
         <div className="infoBox">
-          <p className="infoText phone">
-            <span className="infoType">Phone: </span>
-            {birb.phone}
-          </p>
+          <div className="details">
+            <p className="infoText phone">Phone:</p>
+            <p className="infoDetails phone">{birb.phone}</p>
+          </div>
         </div>
       </div>
-      
     ));
   };
 
@@ -44,7 +42,6 @@ class About extends Component {
     const birbRows = this.getRows();
     return (
       <div className="wrapper">
-      
         <div className="headerNav">
           <img className="birb" src={birb} alt="I'm a birb yo!" />
           <div className="headerWrapper">
