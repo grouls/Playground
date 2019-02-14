@@ -1,9 +1,9 @@
-import React from "react";
-import birb from "../assets/images/birb.gif";
-import beerBirb from "../assets/images/beerBirb.gif";
-import react from "../assets/images/react.png";
-import redux from "../assets/images/redux.png";
-import cssGrid from "../assets/images/cssgrid.png";
+import React       from "react";
+import birb        from "../assets/images/birb.gif";
+import beerBirb    from "../assets/images/beerBirb.gif";
+import react       from "../assets/images/react.png";
+import redux       from "../assets/images/redux.png";
+import cssGrid     from "../assets/images/cssgrid.png";
 import reactRouter from "../assets/images/reactRouter.png";
 import flowdiagram from "../assets/images/flowdiagram.png";
 
@@ -23,6 +23,7 @@ const styles = {
 };
 
 const Henlo = props => {
+  
   const displayHelper = () => {
     const showBirbs = !props.showTheBirbs;
     props.displayBirbs(showBirbs);
