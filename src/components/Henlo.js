@@ -1,11 +1,7 @@
-import React       from "react";
-import beerBirb    from "../assets/images/beerBirb.gif";
-import react       from "../assets/images/react.png";
-import redux       from "../assets/images/redux.png";
-import cssGrid     from "../assets/images/cssgrid.png";
-import reactRouter from "../assets/images/reactRouter.png";
-import TechItem    from "./TechItem";
-import { Link }    from "react-router-dom";
+import React         from "react";
+import beerBirb      from "../assets/images/beerBirb.gif";
+import { Link }      from "react-router-dom";
+import TechContainer from "./TechContainer";
 
 // An example of inline styles as a style object.
 // CSS-in-JS is abstracts the CSS model to the component level,
@@ -19,53 +15,23 @@ const styles = {
   }
 };
 
-const techConfig = [
-  {
-    type: "react",
-    text: "React",
-    img: react
-  },
-  {
-    type: "react_router",
-    text: "React Router",
-    img: reactRouter
-  },
-  {
-    type: "redux",
-    text: "Redux",
-    img: redux
-  },
-  {
-    type: "cssGrid",
-    text: "CSS Grid",
-    img: cssGrid
-  }
-];
-
-const techRows = techConfig.map(item => ( <TechItem item={item} />));
-
-const Henlo = ({showTheBirbs, displayBirbs}) => {
-
+const Henlo = ({ showTheBirbs, displayBirbs }) => {
   const displayHelper = () => displayBirbs(!showTheBirbs);
 
   const birbDisplayText = showTheBirbs ? "Hide" : "Show";
 
   return (
     <div className="wrapper">
-    
       <div className="contentBox contentBox_1">
         <h2 className="header">henlo</h2>
         <div className="intro">
           <p>Welcome to the JoeFads playground!</p>
           <p>
-            Visit the<Link to="/tasks" style={styles.link}>Tasks</Link>
-            page to get started.
+            Visit the<Link to="/tasks" style={styles.link}> Tasks </Link> page to get started.
           </p>
           <p>This was built from scratch to act as a lightweight example using: </p>
         </div>
-        <div className="techContainer">
-          {techRows}
-        </div>
+        <TechContainer />
       </div>
 
       <div className="contentBox contentBox_2">
@@ -77,14 +43,13 @@ const Henlo = ({showTheBirbs, displayBirbs}) => {
           </button>
         </div>
         <div className="imageContainer">
-          {showTheBirbs &&
+          {showTheBirbs && (
             <div className="beerBirbContainer">
               <img src={beerBirb} className="beerBirb" alt="henlo you birb!" />
             </div>
-          }
+          )}
         </div>
       </div>
-      
     </div>
   );
 };
