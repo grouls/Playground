@@ -1,14 +1,11 @@
 import React       from "react";
-import birb        from "../assets/images/birb.gif";
 import beerBirb    from "../assets/images/beerBirb.gif";
 import react       from "../assets/images/react.png";
 import redux       from "../assets/images/redux.png";
 import cssGrid     from "../assets/images/cssgrid.png";
 import reactRouter from "../assets/images/reactRouter.png";
-import flowdiagram from "../assets/images/flowdiagram.png";
-
-import { Link } from "react-router-dom";
-import "../assets/styles/henlo.scss";
+import TechItem    from "./TechItem";
+import { Link }    from "react-router-dom";
 
 // An example of inline styles as a style object.
 // CSS-in-JS is abstracts the CSS model to the component level,
@@ -22,61 +19,52 @@ const styles = {
   }
 };
 
-const Henlo = props => {
-  
-  const displayHelper = () => {
-    const showBirbs = !props.showTheBirbs;
-    props.displayBirbs(showBirbs);
-  };
+const techConfig = [
+  {
+    type: "react",
+    text: "React",
+    img: react
+  },
+  {
+    type: "react_router",
+    text: "React Router",
+    img: reactRouter
+  },
+  {
+    type: "redux",
+    text: "Redux",
+    img: redux
+  },
+  {
+    type: "cssGrid",
+    text: "CSS Grid",
+    img: cssGrid
+  }
+];
 
-  const birbDisplayText = props.showTheBirbs ? "Hide" : "Show";
+const techRows = techConfig.map(item => ( <TechItem item={item} />));
+
+const Henlo = ({showTheBirbs, displayBirbs}) => {
+
+  const displayHelper = () => displayBirbs(!showTheBirbs);
+
+  const birbDisplayText = showTheBirbs ? "Hide" : "Show";
 
   return (
     <div className="wrapper">
-      <div className="headerNav">
-        <img className="birb" src={birb} alt="I'm a birb yo!" />
-        <div className="headerWrapper">
-          <div className="navItem">
-            <Link to="/home">Home</Link>
-          </div>
-          <div className="navItem">
-            <Link to="/about">About</Link>
-          </div>
-          <div className="navItem">
-            <Link to="/tasks">Tasks</Link>
-          </div>
-          <div className="navItem">
-            <a href="#">Link 4</a>
-          </div>
-        </div>
-      </div>
-
+    
       <div className="contentBox contentBox_1">
         <h2 className="header">henlo</h2>
         <div className="intro">
           <p>Welcome to the JoeFads playground!</p>
           <p>
-            Visit the <Link to="/tasks" style={styles.link}>Tasks</Link> page to get started.
+            Visit the<Link to="/tasks" style={styles.link}>Tasks</Link>
+            page to get started.
           </p>
           <p>This was built from scratch to act as a lightweight example using: </p>
         </div>
         <div className="techContainer">
-          <div className="react techGrid">
-            <img src={react} alt="redux" />
-            <p>React</p>
-          </div>
-          <div className="react_router techGrid">
-            <img src={reactRouter} alt="redux" />
-            <p>React Router</p>
-          </div>
-          <div className="redux techGrid">
-            <img src={redux} alt="redux" />
-            <p>Redux</p>
-          </div>
-          <div className="redux techGrid">
-            <img src={cssGrid} alt="redux" />
-            <p>CSS Grid</p>
-          </div>
+          {techRows}
         </div>
       </div>
 
@@ -89,17 +77,14 @@ const Henlo = props => {
           </button>
         </div>
         <div className="imageContainer">
-          {props.showTheBirbs ? (
+          {showTheBirbs &&
             <div className="beerBirbContainer">
               <img src={beerBirb} className="beerBirb" alt="henlo you birb!" />
             </div>
-          ) : null}
+          }
         </div>
       </div>
-      <div className="contentBox footer">
-        <h2 className="header">birb footer</h2>
-        <p className="content">I'm the footer!</p>
-      </div>
+      
     </div>
   );
 };

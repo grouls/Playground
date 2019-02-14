@@ -24,24 +24,6 @@ const styles = {
 
 const Tasks = () => (
   <div className="wrapper">
-    <div className="headerNav">
-      <img className="birb" src={birb} alt="I'm a birb yo!" />
-      <div className="headerWrapper">
-        <div className="navItem">
-          <Link to="/home">Home</Link>
-        </div>
-        <div className="navItem">
-          <Link to="/about">About</Link>
-        </div>
-        <div className="navItem">
-          <Link to="/tasks">Tasks</Link>
-        </div>
-        <div className="navItem">
-          <a href="#">Link 4</a>
-        </div>
-      </div>
-    </div>
-
     <div className="contentBox contentBoxWide">
       <h2 className="header">Birb Tasks</h2>
       <div style={styles.tasks}>
@@ -98,11 +80,6 @@ const Tasks = () => (
           <span style={styles.hint}> Hint: This is perfect to try work with some redux - why not turn this into a checkable checklist?</span>
         </p>
       </div>
-    </div>
-
-    <div className="contentBox footer">
-      <h2 className="header">birb footer</h2>
-      <p className="content">I'm the footer!</p>
     </div>
   </div>
 );
