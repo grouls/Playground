@@ -207,7 +207,7 @@
       display: grid;
       grid-template-columns: 40px 60px auto;
       .mrBirb {
-        justify-self: center;
+        justify-self: start;
         margin-top: 13px;
         grid-column-start: 1;
         grid-column-end: 2;
