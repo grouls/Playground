@@ -52,7 +52,7 @@ class About extends Component {
               <Link to="/about">About</Link>
             </div>
             <div className="navItem">
-              <a href="#">Link 3</a>
+              <Link to="/tasks">Tasks</Link>
             </div>
             <div className="navItem">
               <a href="#">Link 4</a>
@@ -60,7 +60,7 @@ class About extends Component {
           </div>
         </div>
 
-        <div className="contentBox contentBoxAbout">
+        <div className="contentBox contentBoxWide">
           <h2 className="header">about the birbs!</h2>
           <div className="loadingContainer">
             {this.props.birbsLoadingStatus === "loading" ? (

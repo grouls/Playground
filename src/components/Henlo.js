@@ -10,6 +10,18 @@ import flowdiagram from "../assets/images/flowdiagram.png";
 import { Link } from "react-router-dom";
 import "../assets/styles/henlo.scss";
 
+// An example of inline styles as a style object.
+// CSS-in-JS is abstracts the CSS model to the component level,
+// rather than the document level (modularity), there a some
+// neat libraries to follow this pattern: JSS, Styled Components + more.
+
+const styles = {
+  link: {
+    color: "goldenrod",
+    "text-decoration": "none"
+  }
+};
+
 const Henlo = props => {
   const displayHelper = () => {
     const showBirbs = !props.showTheBirbs;
@@ -30,7 +42,7 @@ const Henlo = props => {
             <Link to="/about">About</Link>
           </div>
           <div className="navItem">
-            <a href="#">Link 3</a>
+            <Link to="/tasks">Tasks</Link>
           </div>
           <div className="navItem">
             <a href="#">Link 4</a>
@@ -42,6 +54,9 @@ const Henlo = props => {
         <h2 className="header">henlo</h2>
         <div className="intro">
           <p>Welcome to the JoeFads playground!</p>
+          <p>
+            Visit the <Link to="/tasks" style={styles.link}>Tasks</Link> page to get started.
+          </p>
           <p>This was built from scratch to act as a lightweight example using: </p>
         </div>
         <div className="techContainer">
@@ -63,6 +78,7 @@ const Henlo = props => {
           </div>
         </div>
       </div>
+
       <div className="contentBox contentBox_2">
         <h2 className="header">heck'n birbs</h2>
         <div className="intro">
