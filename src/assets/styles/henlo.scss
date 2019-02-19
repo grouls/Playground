@@ -170,7 +170,7 @@
 
 .loadingContainer {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   grid-template-rows: auto;
   justify-items: start;
 
@@ -304,53 +304,3 @@ button:active {
     grid-column-end: 5;
   }
 }
-
-@media only screen and (max-width: 1280px) {
-  .loadingContainer {
-    grid-template-columns: 33% 33% auto;
-    .loadingBirb{
-      grid-column-start: 2;
-      grid-column-end: 3;
-    }
-    .loadingBirbText{
-      grid-column-start: 2;
-      grid-column-end: 3;
-    }
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .loadingContainer {
-    grid-template-columns: 50% 50%;
-    .loadingBirb{
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-    .loadingBirbText{
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-    .birbInfoContainer{
-
-    }
-  }
-}
-
-@media only screen and (max-width: 670px) {
-  .loadingContainer {
-    grid-template-columns: 100%;
-    .loadingBirb{
-      grid-column-start: 1;
-      grid-column-end: 2;
-    }
-    .loadingBirbText{
-      grid-column-start: 1;
-      grid-column-end: 2;
-    }
-    .birbInfoContainer{
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-  }
-}
-
