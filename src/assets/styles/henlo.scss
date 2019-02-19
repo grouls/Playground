@@ -1,10 +1,15 @@
 .wrapper {
   display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh;
+  font-weight: bold;
+}
+
+.henloWrapper {
+  display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
   font-weight: bold;
-  width: 100vw;
-  height: 100vh;
 }
 
 .headerNav {
@@ -97,7 +102,9 @@
 .footer {
   grid-column-start: 1;
   grid-column-end: 5;
-  padding-left: 40px;
+  background-color: #2b333c;
+  height: 100%;
+  width: 100%;
 }
 
 .contentBox {
@@ -201,13 +208,16 @@
   }
 
   .birbInfoContainer {
-    margin-top: 30px;
-    margin-left: 10px;
+    margin: 20px;
+    background: #2b333c;
+    width:90%;
+    border-radius:20px;
+    min-height: 200px;
     .usernameDetails {
       display: grid;
-      grid-template-columns: 40px 60px auto;
+      grid-template-columns: 60px 60px auto;
       .mrBirb {
-        justify-self: start;
+        justify-self: center;
         margin-top: 13px;
         grid-column-start: 1;
         grid-column-end: 2;
@@ -215,26 +225,31 @@
       .infoText {
         grid-column-start: 2;
         grid-column-end: 3;
-        color: green;
+        color: goldenrod;
+        text-transform: capitalize;
       }
       .infoDetails {
         grid-column-start: 3;
         grid-column-end: 5;
-        padding-left: 3px;
+        padding-left: 5px;
+        color: white;
       }
     }
     .details {
       display: grid;
-      grid-template-columns: 40px 60px auto;
+      grid-template-columns: 60px 60px auto;
       .infoText {
         grid-column-start: 2;
         grid-column-end: 3;
-        color: green;
+        color: goldenrod;
+        text-transform: capitalize;
       }
       .infoDetails {
         grid-column-start: 3;
         grid-column-end: 5;
-        padding-left: 3px;
+        padding-left: 5px;
+        margin-right: 20px;
+        color: white;
       }
     }
   }
@@ -291,23 +306,49 @@ button:active {
 @media only screen and (max-width: 1280px) {
   .loadingContainer {
     grid-template-columns: 33% 33% auto;
-    justify-content: center;
+    .loadingBirb{
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    .loadingBirbText{
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .loadingContainer {
     grid-template-columns: 50% 50%;
+    .loadingBirb{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .loadingBirbText{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
     .birbInfoContainer{
-     padding:50px;
+
     }
   }
 }
 
 @media only screen and (max-width: 670px) {
   .loadingContainer {
-    grid-template-columns: 50%;
-    justify-items: start;
+    grid-template-columns: 100%;
+    .loadingBirb{
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .loadingBirbText{
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .birbInfoContainer{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 }
 

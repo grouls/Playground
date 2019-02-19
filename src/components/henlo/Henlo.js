@@ -21,7 +21,7 @@ const Henlo = ({ showTheBirbs, displayBirbs }) => {
   const birbDisplayText = showTheBirbs ? "Hide" : "Show";
 
   return (
-    <div className="wrapper">
+    <div className="henloWrapper">
       <div className="contentBox contentBox_1">
         <h2 className="header">henlo</h2>
         <div className="intro">
