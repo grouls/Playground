@@ -57,68 +57,6 @@
   }
 }
 
-.contentBoxWide {
-  grid-column-start: 1;
-  grid-column-end: 5;
-}
-
-.contentBox {
-  background-color: whitesmoke;
-  box-shadow: 2px 2px 6px #aaaaaa;
-  border-radius: 40px;
-  margin: 20px;
-  padding-top: 10px;
-  overflow: auto;
-
-  .header {
-    text-align: center;
-    text-transform: uppercase;
-    color: goldenrod;
-  }
-  .intro {
-    padding-left: 40px;
-  }
-}
-
-.birb {
-  border-radius: 30px;
-  height: 60px;
-  width: 60px;
-  float: left;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-}
-
-button {
-  outline: none;
-  border: none;
-  background-color: #2b333c;
-  border-radius: 15px;
-  display: block;
-  position: relative;
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  box-shadow: 0 6px goldenrod;
-  color: white;
-  height: 35px;
-  width: 140px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-button:hover {
-  box-shadow: 0 4px goldenrod;
-  top: 2px;
-}
-
-button:active {
-  box-shadow: none;
-  top: 6px;
-}
-
 @media only screen and (max-width: 980px) {
   .birbPics {
     display: grid;

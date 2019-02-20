@@ -26,16 +26,16 @@ class About extends Component {
       <div className="wrapper">
         <div className="contentBox contentBoxWide">
           <h2 className="header">about the birbs!</h2>
-          <div className="loadingContainer">
-            {this.props.birbsLoadingStatus === "loading" ? (
-              <>
+            {this.props.birbsLoadingStatus === "loading" || true ? (
+              <div className="loadingContainer">
                 <img className="loadingBirb" src={loadingBirb} alt="Loading The Birbs" />
                 <p className="loadingBirbText">L O A D I N G</p>
-              </>
+              </div>
             ) : (
-              birbRows
+              <div className="aboutContainer">
+              {birbRows}
+              </div>
             )}
-          </div>
         </div>
       </div>
     );

@@ -1,6 +1,53 @@
 .wrapper {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100vh;
-    font-weight: bold;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh;
+  font-weight: bold;
+}
+
+.contentBox {
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 6px #aaaaaa;
+  border-radius: 40px;
+  margin: 20px;
+  padding-top: 10px;
+  overflow: auto;
+
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    color: goldenrod;
   }
+  .intro {
+    padding-left: 40px;
+  }
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: #2b333c;
+  border-radius: 15px;
+  display: block;
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 6px goldenrod;
+  color: white;
+  height: 35px;
+  width: 140px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 4px goldenrod;
+  top: 2px;
+}
+
+button:active {
+  box-shadow: none;
+  top: 6px;
+}
