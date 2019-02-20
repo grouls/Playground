@@ -1,6 +1,7 @@
 import React   from 'react';
 import {Link } from 'react-router-dom';
 import birb    from "../../assets/images/birb.gif";
+import "../../assets/styles/header.scss";
 
 const Header = () => (
     <div className="headerNav">

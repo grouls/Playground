@@ -5,7 +5,7 @@ import About from "../redux/containers/birbAboutContainer";
 import Tasks from "./tasks";
 import Header from "./nav/Header";
 import Footer from "./nav/Footer";
-import "../assets/styles/henlo.scss";
+import "../assets/styles/app.scss";
 
 const App = () => (
   <div>

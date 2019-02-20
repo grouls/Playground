@@ -1,0 +1,25 @@
+.headerNav {
+    font-weight: bold;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: #2b333c;
+    line-height: 70px; //allows us to use vertical-align
+    //NESTED GRID:  header is also within a main grid along with the content and footer!
+    .headerWrapper {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      justify-items:center;
+      a {
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+      }
+      .navItem {
+        text-decoration: none;
+        color: white;
+        :hover {
+          color: goldenrod;
+        }
+      }
+    }
+  }
