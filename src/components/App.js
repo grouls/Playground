@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import Henlo from "../redux/containers/birbContainer";
+import Henlo from "../redux/containers/birbHenloContainer";
 import About from "../redux/containers/birbAboutContainer";
 import Tasks from "./tasks";
 import Header from "./nav/Header";

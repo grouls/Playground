@@ -2,8 +2,8 @@
 export const TaskConfig = [
     {
       id: 'task_1',
-      task: "Try create a header & footer component, then add it at the App.js level along with the routes so we can render the header and footer across all pages.",
-      hint: "Hint: The header component contains a bunch of nav items... this could be cleaner too!",
+      task: "Try filter the list of birbs on the about page using the input.",
+      hint: "Hint: you will need to create an action to update a filter value + an action to perform the filtering.",
     },
     {
       id: 'task_2',

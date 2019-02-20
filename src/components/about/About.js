@@ -11,7 +11,7 @@ class About extends Component {
     }
   }
   getRows = () => {
-    return this.props.birbList.map(birb => (
+    return this.props.filteredBirbList.map(birb => (
       <div className="birbInfoContainer">
         <ImageInfoBox type="user" value={birb.username} />
         <InfoBox type="name" value={birb.name} />
@@ -19,6 +19,8 @@ class About extends Component {
       </div>
     ));
   };
+  
+  filter = e => this.props.filterBirbList(this.props.birbList, e.target.value)
 
   render() {
     const birbRows = this.getRows();
@@ -26,15 +28,18 @@ class About extends Component {
       <div className="wrapper">
         <div className="contentBox contentBoxWide">
           <h2 className="header">about the birbs!</h2>
-            {this.props.birbsLoadingStatus === "loading" ? (
-              <div className="loadingContainer">
-                <img className="loadingBirb" src={loadingBirb} alt="Loading The Birbs" />
-                <p className="loadingBirbText">L O A D I N G</p>
-              </div>
-            ) : (
-              <div className="aboutContainer">
-              {birbRows}
-              </div>
+          {this.props.birbsLoadingStatus === "loading" ? (
+            <div className="loadingContainer">
+              <img className="loadingBirb" src={loadingBirb} alt="Loading The Birbs" />
+              <p className="loadingBirbText">L O A D I N G</p>
+            </div>
+          ) : (
+              <>
+                <input className="filterInput" placeholder="...Type To Filter" onChange={this.filter} />
+                <div className="aboutContainer">
+                  {birbRows}
+                </div>
+              </>
             )}
         </div>
       </div>

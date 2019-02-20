@@ -1,7 +1,7 @@
 .aboutContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: auto;
+  grid-template-rows: 220px;
   justify-items: start;
   line-height: 30px;
   .birbInfoContainer {
@@ -10,6 +10,7 @@
     width: calc(100% - 20px);
     border-radius: 20px;
     min-height: 200px;
+    max-height: 200px;
     justify-self: center;
     display: grid;
     grid-template-columns: 100%;
@@ -64,7 +65,20 @@
 .contentBoxWide {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 70px 100px;
+  grid-template-rows: 70px 40px;
+  .filterInput {
+    height: 30px;
+    width: 40%;
+    justify-self: center;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    color:#2b333c;
+    font-size:13px;
+
+  }
   .loadingContainer {
     justify-self: center;
     grid-template-columns: 100%;

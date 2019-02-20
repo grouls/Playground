@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import showTheBirbs        from "./birbReducer";
-import birbs               from './birbAboutReducer';
+import henlo               from "./birbHenloReducer";
+import about               from './birbAboutReducer';
 
 export default combineReducers({
-  showTheBirbs,
-  birbs
+  henlo,
+  about
 });

@@ -4,7 +4,7 @@ import Henlo                  from '../../components/henlo';
 import * as actions           from '../actions/birbActions';
 
 export const mapStateToProps = state => ({
-  showTheBirbs : state.showTheBirbs.value
+  showTheBirbs : state.henlo.showBirb
 });
 
 export const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);

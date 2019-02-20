@@ -10,7 +10,8 @@ const styles = {
     opacity: "0.8"
   },
   bullet: {
-    "padding-right": "10px"
+    "padding-right": "10px",
+    "margin-left": "10px"
   },
   task: {
     color: "white"
