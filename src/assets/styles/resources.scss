@@ -5,21 +5,25 @@
   background: #2b333c;
   border-radius: 20px;
   margin: 20px;
-  .resourceName{
-      color: white;
-      text-transform: capitalize;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+  .tooltip {
+    padding-right: 10px;
   }
-  .resourceUrl{
+  .resourceName {
+    color: white;
+    text-transform: capitalize;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .resourceUrl {
+    color: rgb(105, 215, 252);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 5px;
+    margin-left:30px;
+    a {
       color: rgb(105, 215, 252);
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      padding-top:5px;
-      a{
-        color: rgb(105, 215, 252);
-      }
+    }
   }
 }
