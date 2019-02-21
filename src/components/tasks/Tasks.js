@@ -6,7 +6,6 @@ const styles = {
   tasks: {
     "margin-left": "20px",
     "margin-right": "20px",
-    "margin-top": "30px"
   }
 };
 
@@ -14,7 +13,7 @@ const taskRows = TaskConfig.map(({id, task, hint}) => <TaskItem key={id} task={t
 
 const Tasks = () => (
   <div className="wrapper">
-    <div className="contentBox contentBoxWide">
+    <div className="contentBox">
       <h2 className="header">Birb Tasks</h2>
       <div style={styles.tasks}>
         {taskRows}
