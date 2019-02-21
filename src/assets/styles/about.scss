@@ -26,7 +26,7 @@
       .infoText {
         grid-column-start: 2;
         grid-column-end: 3;
-        color: goldenrod;
+        color: rgb(253, 194, 44);
         text-transform: capitalize;
       }
       .infoDetails {
@@ -50,7 +50,7 @@
       .infoText {
         grid-column-start: 2;
         grid-column-end: 3;
-        color: goldenrod;
+        color: rgb(253, 194, 44);
         text-transform: capitalize;
       }
       .infoDetails {
@@ -121,7 +121,7 @@
     }
     .loadingBirbText {
       justify-self: center;
-      color: goldenrod;
+      color: rgb(253, 194, 44);
     }
   }
 }
