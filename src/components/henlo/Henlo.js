@@ -4,31 +4,19 @@ import { Link }      from "react-router-dom";
 import TechContainer from "./TechContainer";
 import "../../assets/styles/henlo.scss";
 
-// An example of inline styles as a style object.
-// CSS-in-JS is abstracts the CSS model to the component level,
-// rather than the document level (modularity), there a some
-// neat libraries to follow this pattern: JSS, Styled Components + more.
-
-const styles = {
-  link: {
-    color: "goldenrod",
-    "text-decoration": "none"
-  }
-};
-
 const Henlo = ({ showTheBirbs, displayBirbs }) => {
   const displayHelper = () => displayBirbs(!showTheBirbs);
-
   const birbDisplayText = showTheBirbs ? "Hide" : "Show";
+  const url = "https://github.com/joefads/Playground";
 
   return (
     <div className="henloWrapper">
       <div className="contentBox contentBox_1">
         <h2 className="header">henlo</h2>
         <div className="intro">
-          <p>Welcome to the JoeFads playground!</p>
+          <p>Welcome to the <a href={url} target="_blank" rel="noopener noreferrer">JoeFads</a> playground!</p>
           <p>
-            Visit the<Link to="/tasks" style={styles.link}> Tasks </Link> page to get started.
+            Visit the<Link to="/tasks"> Tasks </Link> page to get started.
           </p>
           <p>This was built from scratch to act as a lightweight example using: </p>
         </div>

@@ -9,6 +9,13 @@
   grid-column-end: 3;
   .intro {
     margin-right: 20px;
+    a{
+      text-decoration: none;
+      color: goldenrod;
+    }
+    a:hover{
+      color:rgb(245, 192, 57)
+    }
   }
   .techContainer {
     .techGrid {
