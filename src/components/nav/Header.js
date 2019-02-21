@@ -17,7 +17,7 @@ const Header = () => (
         <Link to="/tasks">Tasks</Link>
       </div>
       <div className="navItem">
-        <a href="#">Link 4</a>
+        <Link to="/resources">Resources</Link>
       </div>
     </div>
   </div>
