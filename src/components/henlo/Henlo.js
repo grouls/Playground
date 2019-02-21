@@ -38,7 +38,7 @@ const Henlo = ({ showTheBirbs, displayBirbs }) => {
       <div className="contentBox contentBox_2">
         <h2 className="header">heck'n birbs</h2>
         <div className="intro">
-          <p>A simple hide / show example to demonstrate dispatching an action from a prop passed to this component, updating state and triggering component to render again.</p>
+          <p>A simple hide / show example.</p>
           <button className="birbButton" onClick={displayHelper}>
             {birbDisplayText} birb!
           </button>
