@@ -2,12 +2,11 @@ import React from "react";
 
 const styles = {
   hint: {
-    color: "goldenrod",
+    color: "lightgreen",
     display: "block",
     "margin-left": "20px",
     "margin-top": "15px",
-    "font-size": "13.5px",
-    opacity: "0.8"
+    "font-size": "14px",
   },
   bullet: {
     "padding-right": "10px",
