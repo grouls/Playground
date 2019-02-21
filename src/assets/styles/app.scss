@@ -51,3 +51,8 @@ button:active {
   box-shadow: none;
   top: 6px;
 }
+
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
