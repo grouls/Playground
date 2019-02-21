@@ -13,9 +13,9 @@ class About extends Component {
   getRows = () => {
     return this.props.filteredBirbList.map(birb => (
       <div className="birbInfoContainer">
-        <ImageInfoBox type="user" value={birb.username} />
-        <InfoBox type="name" value={birb.name} />
-        <InfoBox type="phone" value={birb.phone} />
+        <ImageInfoBox type="user" value={birb.username} activeFilter={this.props.activeFilter} />
+        <InfoBox type="name" value={birb.name} activeFilter={this.props.activeFilter} />
+        <InfoBox type="phone" value={birb.phone} activeFilter={this.props.activeFilter} />
       </div>
     ));
   };

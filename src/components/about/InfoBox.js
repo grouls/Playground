@@ -1,10 +1,13 @@
-import React from "react";
+import React       from "react";
+import Highlighter from "react-highlight-words";
 
-const InfoBox = ({ value, type }) => (
+const InfoBox = ({ value, type, activeFilter }) => (
   <div className="infoBox">
     <div className="details">
       <p className={`infoText ${type}`}>{type}:</p>
-      <p className={`infoDetails ${type}`}>{value}</p>
+      <div className={`infoDetails ${type}`}>
+        <Highlighter highlightClassName="highlightDetails" searchWords={[activeFilter]} autoEscape={true} textToHighlight={value} />
+      </div>
     </div>
   </div>
 );

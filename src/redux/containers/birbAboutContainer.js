@@ -6,7 +6,7 @@ import * as actions           from '../actions/birbActions';
 export const mapStateToProps = state => ({
   birbList           : state.about.birbList || [],
   birbsLoadingStatus : state.about.birbsLoadingStatus || '',
-  activeFilter       : state.about.filter,
+  activeFilter       : state.about.filter || '',
   filteredBirbList    : state.about.filteredBirbList || []
 });
 
