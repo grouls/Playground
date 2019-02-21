@@ -78,5 +78,15 @@ export const resources = [
     id: "resource_16",
     name: "Master the JavaScript Interview: What is Functional Programming?",
     url: "https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0"
-  }
+  },
+  {
+    id: "resource_17",
+    name: "Testing React with Jest and Enzyme",
+    url: "https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675"
+  },
+  {
+    id: "resource_18",
+    name: "Components testing in React",
+    url: "https://medium.freecodecamp.org/components-testing-in-react-what-and-how-to-test-with-jest-and-enzyme-7c1cace99de5"
+  },
 ];
