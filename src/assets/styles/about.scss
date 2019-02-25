@@ -133,3 +133,10 @@
   height: 30px;
   width: 30px;
 }
+
+@media only screen and (max-width: 490px) {
+  .aboutContainer {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
