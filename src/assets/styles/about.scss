@@ -9,7 +9,6 @@
     width: calc(100% - 20px);
     border-radius: 20px;
     min-height: 200px;
-    // max-height: 200px;
     justify-self: center;
     display: grid;
     grid-template-columns: 100%;
@@ -27,6 +26,7 @@
         grid-column-end: 3;
         color: rgb(253, 194, 44);
         text-transform: capitalize;
+        font-weight: bold;
       }
       .infoDetails {
         grid-column-start: 3;
@@ -50,6 +50,7 @@
         grid-column-end: 3;
         color: rgb(253, 194, 44);
         text-transform: capitalize;
+        font-weight: bold;
       }
       .infoDetails {
         grid-column-start: 3;
@@ -84,6 +85,7 @@
     font-weight: bold;
     color: #2b333c;
     font-size: 13px;
+    font-family: monospace;
   }
   .loadingContainer {
     justify-self: center;

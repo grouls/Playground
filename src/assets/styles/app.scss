@@ -1,13 +1,14 @@
-.appWrapper{
+.appWrapper {
   display: grid;
   grid-template-columns: 100%;
+  font-family: monospace;
+  font-size: 17px;
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 87vh;
-  font-weight: bold;
 }
 
 .contentBox {
@@ -58,14 +59,24 @@ button:active {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;  /* remove scrollbar space */
-  background: transparent;  /* optional: just make scrollbar invisible */
+  width: 0px; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
 }
 
-@media only screen and (max-width: 715px){
-  .appWrapper{
+.fade {
+  opacity: 1;
+}
+.fade:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 715px) {
+  .appWrapper {
     display: grid;
     grid-template-columns: 130px auto;
   }
+  .wrapper{
+    grid-template-rows: 95vh;
+  }
 }
-

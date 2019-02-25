@@ -30,7 +30,7 @@ class About extends Component {
           <BirbLoader />
           ) : (
             <>
-              <input className="filterInput" placeholder="...Type To Filter" onChange={this.filter} />
+              <input className="filterInput" placeholder="\/^v^\/" onChange={this.filter} />
               <div className="aboutContainer">{birbRows}</div>
             </>
           )}
