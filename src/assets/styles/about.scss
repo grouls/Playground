@@ -1,6 +1,6 @@
 .aboutContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-template-rows: 220px 220px 220px 220px;
   justify-items: start;
   line-height: 30px;
@@ -132,6 +132,12 @@
   border-radius: 15px;
   height: 30px;
   width: 30px;
+}
+
+@media only screen and (max-width: 570px) {
+  .aboutContainer {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 
 @media only screen and (max-width: 490px) {
