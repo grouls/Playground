@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import loadingBirb          from "../../assets/images/loading.gif";
-import InfoBox              from "./InfoBox";
-import ImageInfoBox         from "./ImageInfoBox";
+import BirbLoader           from "../common/BirbLoader";
+import InfoContainer        from "./infoContainer";
+
 import "../../assets/styles/about.scss";
 
 class About extends Component {
@@ -14,11 +14,7 @@ class About extends Component {
   getRows = () => {
     const searchwords = this.props.activeFilter.split(" ");
     return this.props.filteredBirbList.map(birb => (
-      <div key={`${birb.username}_container`} className="birbInfoContainer">
-        <ImageInfoBox key={`${birb.username}_username`} type="user" value={birb.username} searchwords={searchwords} />
-        <InfoBox key={`${birb.username}_name`} type="name" value={birb.name} searchwords={searchwords} />
-        <InfoBox key={`${birb.username}_phone`} type="phone" value={birb.phone} searchwords={searchwords} />
-      </div>
+      <InfoContainer key={birb.username} birb={birb} searchwords={searchwords}/>
     ));
   };
 
@@ -31,10 +27,7 @@ class About extends Component {
         <div className="contentBox contentBoxWide">
           <h2 className="header">about the birbs!</h2>
           {this.props.birbsLoadingStatus === "loading" ? (
-            <div className="loadingContainer">
-              <img className="loadingBirb" src={loadingBirb} alt="Loading The Birbs" />
-              <p className="loadingBirbText">L O A D I N G</p>
-            </div>
+          <BirbLoader />
           ) : (
             <>
               <input className="filterInput" placeholder="...Type To Filter" onChange={this.filter} />

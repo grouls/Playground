@@ -1,6 +1,6 @@
 import React       from "react";
 import Highlighter from "react-highlight-words";
-import mrBirb      from "../../assets/images/mrBirb.jpg";
+import mrBirb      from "../../../assets/images/mrBirb.jpg";
 
 const UsernameInfoBox = ({type, value, searchwords}) => (
   <div className="infoBox">
