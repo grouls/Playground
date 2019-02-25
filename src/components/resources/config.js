@@ -89,4 +89,9 @@ export const resources = [
     name: "Components testing in React",
     url: "https://medium.freecodecamp.org/components-testing-in-react-what-and-how-to-test-with-jest-and-enzyme-7c1cace99de5"
   },
+  {
+    id: "resource_19",
+    name: "david waslsh: async await",
+    url: "https://davidwalsh.name/async-await"
+  }
 ];
