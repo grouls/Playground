@@ -99,4 +99,9 @@ export const resources = [
     name: "truly understanding async await",
     url: "https://medium.com/@rafaelvidaurre/truly-understanding-async-await-491dd580500e"
   },
+  {
+    id: "resource_21",
+    name: "A Dummy’s Guide to Redux and Thunk in React",
+    url: "https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3"
+  },
 ];
