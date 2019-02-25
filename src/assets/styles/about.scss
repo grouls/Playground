@@ -72,6 +72,7 @@
 .contentBoxWide {
   display: grid;
   grid-template-columns: 100%;
+  grid-template-rows: 100px 50px auto;
   .filterInput {
     height: 30px;
     width: 90%;
