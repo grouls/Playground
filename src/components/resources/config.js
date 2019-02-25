@@ -93,5 +93,10 @@ export const resources = [
     id: "resource_19",
     name: "david waslsh: async await",
     url: "https://davidwalsh.name/async-await"
-  }
+  },
+  {
+    id: "resource_20",
+    name: "truly understanding async await",
+    url: "https://medium.com/@rafaelvidaurre/truly-understanding-async-await-491dd580500e"
+  },
 ];

@@ -1,34 +1,49 @@
 .headerNav {
-    font-weight: bold;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    background-color: #2b333c;
-    line-height: 70px; //allows us to use vertical-align
-    //NESTED GRID:  header is also within a main grid along with the content and footer!
-    .headerWrapper {
-      display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
-      justify-items:center;
-      a {
-        text-decoration: none;
-        color: white;
-        margin-left: 10px;
-      }
-      .navItem {
-        text-decoration: none;
-        color: white;
-        :hover {
-          color: rgb(253, 194, 44);
-        }
-      }
-    }
-    .birb {
-      border-radius: 30px;
-      height: 60px;
-      width: 60px;
-      float: left;
-      margin-top: 5px;
-      margin-bottom: 5px;
+  font-weight: bold;
+  background-color: #2b333c;
+  line-height: 70px; //allows us to use vertical-align
+  //NESTED GRID:  header is also within a main grid along with the content and footer!
+  .headerWrapper {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-items: center;
+    a {
+      text-decoration: none;
+      color: white;
       margin-left: 10px;
     }
+    .navItem {
+      text-decoration: none;
+      color: white;
+      :hover {
+        color: rgb(253, 194, 44);
+      }
+    }
   }
+  .birb {
+    border-radius: 30px;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  .appWrapper {
+    .headerNav {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 70px;
+      .birb{
+        justify-self: center;
+      }
+      .headerWrapper {
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 100px 100px 100px
+      }
+    }
+  }
+}

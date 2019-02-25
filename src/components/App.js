@@ -9,7 +9,7 @@ import Resources from "./resources";
 import "../assets/styles/app.scss";
 
 const App = () => (
-  <div>
+  <div className="appWrapper">
     <Header />
     <div className="wrapper">
       <Route exact path="/" component={Henlo} />

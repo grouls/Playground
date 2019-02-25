@@ -1,3 +1,8 @@
+.appWrapper{
+  display: grid;
+  grid-template-columns: 100%;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 100%;
@@ -56,3 +61,11 @@ button:active {
   width: 0px;  /* remove scrollbar space */
   background: transparent;  /* optional: just make scrollbar invisible */
 }
+
+@media only screen and (max-width: 715px){
+  .appWrapper{
+    display: grid;
+    grid-template-columns: 130px auto;
+  }
+}
+
