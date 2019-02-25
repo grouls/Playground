@@ -5,6 +5,11 @@ export const displayBirbs = value => ({
   value
 });
 
+export const showHenloCode = value => ({
+  type: actionTypes.SHOW_HENLO_CODE,
+  value
+});
+
 export const updateBirbList = value => ({
   type: actionTypes.UPDATE_THE_BIRBS,
   value

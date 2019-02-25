@@ -29,6 +29,15 @@
   }
 }
 
+.showCodeButton{
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  float: right;
+  margin: 10px;
+  font-size: 12px;
+}
+
 button {
   outline: none;
   border: none;
@@ -69,6 +78,13 @@ button:active {
 .fade:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+.codeContainer {
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 10px;
 }
 
 @media only screen and (max-width: 715px) {

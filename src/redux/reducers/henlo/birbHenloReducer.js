@@ -1,10 +1,11 @@
-import createReducer from "../util/createReducer";
+import createReducer    from "../util/createReducer";
 import * as actionTypes from "../../actions/actionTypes";
-import initialState from "./initialState";
+import initialState     from "./initialState";
 
 // action handlers
 const actionHandlers = {
-  [actionTypes.SHOW_THE_BIRBS]: (state, { value }) => ({ showBirb: value })
+  [actionTypes.SHOW_THE_BIRBS]: (state, { value }) => ({ showBirb: value }),
+  [actionTypes.SHOW_HENLO_CODE]: (state, { value }) => ({ showCode: value })
 };
 
 // reducer
