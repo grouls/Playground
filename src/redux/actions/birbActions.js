@@ -1,15 +1,17 @@
+import * as actionTypes from "./actionTypes";
+
 export const displayBirbs = value => ({
-  type: "SHOW_THE_BIRBS",
+  type: actionTypes.SHOW_THE_BIRBS,
   value
 });
 
 export const updateBirbList = value => ({
-  type: "UPDATE_THE_BIRBS",
+  type: actionTypes.UPDATE_THE_BIRBS,
   value
 });
 
 export const updateLoadingStatus = value => ({
-  type: "BIRBS_LOADING_STATUS",
+  type: actionTypes.BIRBS_LOADING_STATUS,
   value
 });
 
@@ -36,12 +38,12 @@ export const filterBirbList = (list, filter) => dispatch => {
 };
 
 export const updateBirbFilter = value => ({
-  type: "UPDATE_BIRB_FILTER",
+  type: actionTypes.UPDATE_BIRB_FILTER,
   value
 });
 
 export const updateFilteredList = value => ({
-  type: "UPDATE_FILTERED_LIST",
+  type: actionTypes.UPDATE_FILTERED_LIST,
   value
 });
 

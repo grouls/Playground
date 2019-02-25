@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import henlo               from "./birbHenloReducer";
-import about               from './birbAboutReducer';
+import henlo               from "./henlo";
+import about               from './about';
 
 export default combineReducers({
   henlo,
