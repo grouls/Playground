@@ -7,9 +7,9 @@ const UsernameInfoBox = ({type, value, searchwords}) => (
     <div className="usernameDetails">
       <img className="mrBirb" src={mrBirb} alt="I'm a birb yo!" />
       <p className={`infoText ${type}`}>{type}:</p>
-      <div className={`infoDetails ${type}`}>
+      <p className={`infoDetails ${type}`}>
         <Highlighter highlightClassName="highlightDetails" searchWords={searchwords} autoEscape={true} textToHighlight={value} />
-      </div>
+      </p>
     </div>
   </div>
 );

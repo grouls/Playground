@@ -3,14 +3,13 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-template-rows: 220px 220px 220px 220px;
   justify-items: start;
-  line-height: 30px;
   .birbInfoContainer {
     margin: 20px;
     background: #2b333c;
     width: calc(100% - 20px);
     border-radius: 20px;
     min-height: 200px;
-   // max-height: 200px;
+    // max-height: 200px;
     justify-self: center;
     display: grid;
     grid-template-columns: 100%;
@@ -33,12 +32,11 @@
         grid-column-start: 3;
         grid-column-end: 5;
         padding-left: 5px;
-        line-height:62px;
         color: white;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        .highlightDetails{
+        .highlightDetails {
           background: none;
           color: lightgreen;
         }
@@ -54,7 +52,6 @@
         text-transform: capitalize;
       }
       .infoDetails {
-        line-height:62px;
         grid-column-start: 3;
         grid-column-end: 5;
         padding-left: 5px;
@@ -63,7 +60,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        .highlightDetails{
+        .highlightDetails {
           background: none;
           color: lightgreen;
         }
@@ -85,9 +82,8 @@
     outline: none;
     text-align: center;
     font-weight: bold;
-    color:#2b333c;
-    font-size:13px;
-
+    color: #2b333c;
+    font-size: 13px;
   }
   .loadingContainer {
     justify-self: center;
@@ -140,9 +136,40 @@
   }
 }
 
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 530px) {
   .aboutContainer {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    .birbInfoContainer {
+      overflow: auto;
+      .usernameDetails {
+        grid-template-columns: 25% 25% 25% 25%;
+        .mrBirb{
+          grid-column-start: 1;
+          grid-column-end: 5;
+        }
+        .infoText{
+          margin-left: 20px;
+          grid-column-start: 1;
+          grid-column-end: 2;
+        }
+        .infoDetails{
+          margin-left: 10px;
+          grid-column-start: 2;
+          grid-column-end: 5;
+        }
+      }
+      .details {
+        .infoText{
+          margin-left: 20px;
+          grid-column-start: 1;
+          grid-column-end: 2;
+        }
+        .infoDetails{
+          margin-left: 10px;
+          grid-column-start: 2;
+          grid-column-end: 5;
+        }
+      }
+    }
   }
 }
-

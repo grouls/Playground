@@ -5,9 +5,9 @@ const InfoBox = ({ value, type, searchwords }) => (
   <div className="infoBox">
     <div className="details">
       <p className={`infoText ${type}`}>{type}:</p>
-      <div className={`infoDetails ${type}`}>
+      <p className={`infoDetails ${type}`}>
         <Highlighter highlightClassName="highlightDetails" searchWords={searchwords} autoEscape={true} textToHighlight={value} />
-      </div>
+      </p>
     </div>
   </div>
 );
