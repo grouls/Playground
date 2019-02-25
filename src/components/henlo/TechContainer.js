@@ -28,7 +28,7 @@ const techConfig = [
   }
 ];
 
-const techRows = techConfig.map(item => <TechItem item={item} />);
+const techRows = techConfig.map(item => <TechItem key={item.type} item={item} />);
 
 const TechContainer = () => <div className="techContainer">{techRows}</div>;
 

@@ -10,13 +10,14 @@ class About extends Component {
       this.props.getTheBirbs();
     }
   }
+  
   getRows = () => {
     const searchwords = this.props.activeFilter.split(' ');
     return this.props.filteredBirbList.map(birb => (
       <div className="birbInfoContainer">
-        <ImageInfoBox type="user" value={birb.username} searchwords={searchwords} />
-        <InfoBox type="name" value={birb.name} searchwords={searchwords} />
-        <InfoBox type="phone" value={birb.phone} searchwords={searchwords} />
+        <ImageInfoBox key={birb.username} type="user" value={birb.username} searchwords={searchwords} />
+        <InfoBox key={birb.username} type="name" value={birb.name} searchwords={searchwords} />
+        <InfoBox key={birb.username} type="phone" value={birb.phone} searchwords={searchwords} />
       </div>
     ));
   };
