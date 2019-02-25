@@ -19,19 +19,17 @@ export const updateLoadingStatus = value => {
   });
 };
 
-export const getTheBirbs = () => dispatch => {
+export const getTheBirbs = () => async dispatch => {
   dispatch(updateLoadingStatus('loading'));
   try {
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(birbs => {
+    let response = await fetch('https://jsonplaceholder.typicode.com/users');
+    let json = await response.json();
       //just because its so fast... 
       setTimeout(function(){
-        dispatch(updateBirbList(birbs));
-        dispatch(updateFilteredList(birbs));
+        dispatch(updateBirbList(json));
+        dispatch(updateFilteredList(json));
         dispatch(updateLoadingStatus('loaded'));
       }, 3000);
-    })
   } catch (error) {
     console.log(error);
   }
@@ -59,6 +57,7 @@ export const updateFilteredList = (value) => {
 
 
 const caseInsensitiveIncludes = (str = '', search) => str.toLowerCase().includes(search.toLowerCase());
+
 const filterList = (list, filter) => list.filter((birb) =>
   caseInsensitiveIncludes(birb.username, filter) ||
   caseInsensitiveIncludes(birb.name, filter) ||
