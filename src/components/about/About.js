@@ -10,19 +10,19 @@ class About extends Component {
       this.props.getTheBirbs();
     }
   }
-  
+
   getRows = () => {
-    const searchwords = this.props.activeFilter.split(' ');
+    const searchwords = this.props.activeFilter.split(" ");
     return this.props.filteredBirbList.map(birb => (
-      <div className="birbInfoContainer">
-        <ImageInfoBox key={birb.username} type="user" value={birb.username} searchwords={searchwords} />
-        <InfoBox key={birb.username} type="name" value={birb.name} searchwords={searchwords} />
-        <InfoBox key={birb.username} type="phone" value={birb.phone} searchwords={searchwords} />
+      <div key={`${birb.username}_container`} className="birbInfoContainer">
+        <ImageInfoBox key={`${birb.username}_username`} type="user" value={birb.username} searchwords={searchwords} />
+        <InfoBox key={`${birb.username}_name`} type="name" value={birb.name} searchwords={searchwords} />
+        <InfoBox key={`${birb.username}_phone`} type="phone" value={birb.phone} searchwords={searchwords} />
       </div>
     ));
   };
-  
-  filter = e => this.props.filterBirbList(this.props.birbList, e.target.value)
+
+  filter = e => this.props.filterBirbList(this.props.birbList, e.target.value);
 
   render() {
     const birbRows = this.getRows();
@@ -36,13 +36,11 @@ class About extends Component {
               <p className="loadingBirbText">L O A D I N G</p>
             </div>
           ) : (
-              <>
-                <input className="filterInput" placeholder="...Type To Filter" onChange={this.filter} />
-                <div className="aboutContainer">
-                  {birbRows}
-                </div>
-              </>
-            )}
+            <>
+              <input className="filterInput" placeholder="...Type To Filter" onChange={this.filter} />
+              <div className="aboutContainer">{birbRows}</div>
+            </>
+          )}
         </div>
       </div>
     );
