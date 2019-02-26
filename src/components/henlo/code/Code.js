@@ -9,7 +9,7 @@ class Code extends Component {
     Prism.highlightAll();
   }
 
-  getItems = () => codeConfig.map(({ text, code, src }) => <CodeItem text={text} code={code} src={src} />);
+  getItems = () => codeConfig.map(({ id, text, code, src }) => <CodeItem key={id} text={text} code={code} src={src} />);
 
   render() {
     return (
