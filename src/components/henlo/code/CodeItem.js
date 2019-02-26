@@ -11,7 +11,7 @@ const CodeItem = ({ text, code, src }) => (
       </pre>
     </div>
     <div className="intro">
-      <p className="codeSource">{src}</p>
+      <p className="codeSource">Src: '{src}'</p>
     </div>
   </>
 );
