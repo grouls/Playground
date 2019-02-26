@@ -6,8 +6,10 @@ import '../../assets/styles/prism.css';
 
 
 const Henlo = ({ showTheBirbs, showHenloCode, displayBirbs, showCode }) => {
-  const displayHelper = () => displayBirbs(!showTheBirbs);
+
+  const displayHelper  = () => displayBirbs(!showTheBirbs);
   const showCodeHelper = () => showHenloCode(!showCode);
+  
   return (
     <div className="henloWrapper">
       <ContentBoxOne />
