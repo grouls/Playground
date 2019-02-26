@@ -9,11 +9,7 @@ const ContentBoxOne = () => (
     <h2 className="header">henlo</h2>
     <div className="intro">
       <p>
-        Welcome to the
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          JoeFads
-        </a>
-        playground!
+        Welcome to the<a href={url} target="_blank" rel="noopener noreferrer"> JoeFads </a> playground!
       </p>
       <p>
         Visit the<Link to="/tasks"> Tasks </Link> page to get started.
