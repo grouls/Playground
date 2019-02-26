@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CodeItem             from "../henlo/code/CodeItem";
+import CodeItem             from "../common/CodeItem";
 import Prism                from "prismjs";
 class TaskItem extends Component {
 

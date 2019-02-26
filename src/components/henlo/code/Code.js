@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Prism                from "prismjs";
 import dev_tools            from "../../../assets/images/redux_dev_tools.png";
-import CodeItem             from "./CodeItem";
+import CodeItem             from "../../common/CodeItem";
 import { codeConfig }        from "../config";
 
 class Code extends Component {
