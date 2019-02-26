@@ -25,6 +25,12 @@ export const updateShowAddBirb = value => ({
   value
 })
 
+export const addNewBirb = value => dispatch => {
+  dispatch(updateBirbList(value));
+  dispatch(updateFilteredList(value));
+  dispatch(updateShowAddBirb(false));
+}
+
 export const getTheBirbs = () => async dispatch => {
   dispatch(updateLoadingStatus("loading"));
   try {

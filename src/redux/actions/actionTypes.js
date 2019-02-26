@@ -5,3 +5,4 @@ export const UPDATE_BIRB_FILTER   = "UPDATE_BIRB_FILTER";
 export const UPDATE_FILTERED_LIST = "UPDATE_FILTERED_LIST";
 export const SHOW_HENLO_CODE      = "SHOW_HENLO_CODE";
 export const SHOW_ADD_BIRB        = "SHOW_ADD_BIRB";
+export const ADD_NEW_BIRB         = "ADD_NEW_BIRB";

@@ -1,21 +1,10 @@
-import React from "react";
-
-const AddInfoContainer = () => (
-  <div className="addInfoContainerGrid">
-    <div className="addInfoGrid">
-      <p>user: </p>
-      <input className="filterInput" />
-    </div>
-    <div className="addInfoGrid">
-      <p>name: </p>
-      <input className="filterInput" />
-    </div>
-    <div className="addInfoGrid">
-      <p>phone: </p>
-      <input className="filterInput" />
-    </div>
-    <button className="addInfoBtn">Add</button>
-  </div>
-);
+import React, { Component } from "react";
+import AddBirbForm          from "./AddBirbForm";
+class AddInfoContainer extends Component {
+  submit = values => this.props.addNewBirb(values);
+  render() {
+    return <AddBirbForm onSubmit={this.submit} />;
+  }
+}
 
 export default AddInfoContainer;

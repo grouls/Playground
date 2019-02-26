@@ -1,7 +1,6 @@
 import createReducer    from "../util/createReducer";
 import * as actionTypes from "../../actions/actionTypes";
 import initialState     from "./initialState";
-import { showAddBirb } from '../../actions/birbActions';
 
 // action handlers
 const actionHandlers = {
@@ -14,7 +13,6 @@ const actionHandlers = {
 
 // reducer
 export default createReducer(initialState, actionHandlers);
-
 
 // This is how we would structure our reducer without a createReducer fn that helps reduce boilerplate.
 

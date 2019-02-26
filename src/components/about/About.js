@@ -17,7 +17,13 @@ class About extends Component {
       <InfoContainer key={birb.username} birb={birb} searchwords={searchwords}/>
     ));
   };
-  
+
+  addNewBirb = values => {
+    // join old list with new birb.
+    const birbs = [...this.props.birbList, ...[values]];
+    this.props.addNewBirb(birbs);
+  }
+
   addBirb = () => this.props.updateShowAddBirb(!this.props.showAddBirb);
 
   filter = e => this.props.filterBirbList(this.props.birbList, e.target.value);
@@ -36,7 +42,7 @@ class About extends Component {
           <BirbLoader />
           ) : (
             this.props.showAddBirb ? 
-            <AddInfoContainer />
+            <AddInfoContainer addNewBirb={this.addNewBirb}/>
             :
             <>
               <input className="filterInput" placeholder="\/^v^\/" onChange={this.filter} />
