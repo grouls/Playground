@@ -36,7 +36,7 @@ export const codeConfig = [
     text: "The displayHelper fn calls the destructured displayBirbs fn prop with an inverted boolean value using the showTheBirbs prop.",
     code: `
     const Henlo = ({ showTheBirbs, showHenloCode, displayBirbs, showCode }) => {
-      const displayHelper   = () => displayBirbs(!showTheBirbs);
+      const displayHelper = () => displayBirbs(!showTheBirbs);
     `,
     src : "/components/henlo/Henlo.js"
   },
