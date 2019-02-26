@@ -4,8 +4,8 @@ import initialState     from "./initialState";
 
 // action handlers
 const actionHandlers = {
-  [actionTypes.SHOW_THE_BIRBS]: (state, { value }) => ({ showBirb: value }),
-  [actionTypes.SHOW_HENLO_CODE]: (state, { value }) => ({ showCode: value })
+  [actionTypes.SHOW_THE_BIRBS]: (state, { value }) => ({...state, showBirb: value }),
+  [actionTypes.SHOW_HENLO_CODE]: (state, { value }) => ({...state, showCode: value })
 };
 
 // reducer
