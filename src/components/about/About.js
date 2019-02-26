@@ -19,7 +19,7 @@ class About extends Component {
   };
 
   addNewBirb = values => {
-    // join old list with new birb.
+    // create a new array that joins old list with new birb object - wrapped in an array.
     const birbs = [...this.props.birbList, ...[values]];
     this.props.addNewBirb(birbs);
   }

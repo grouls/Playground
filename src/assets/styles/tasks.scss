@@ -2,26 +2,31 @@
   margin: 20px;
   .taskItemContainer {
     display: grid;
-    grid-template-columns: 40px auto;
+    grid-template-columns: 100%;
     padding: 5px;
     background: #2b333c;
     border-radius: 20px;
     margin-bottom: 20px;
-    .hint {
-      color: lightgreen;
-      display: block;
-      margin-left: 20px;
-      margin-top: 15px;
-      font-size: 14px;
-    }
 
-    .bullet {
-      padding-right: 10px;
-      margin-left: 10px;
-    }
+    .taskItemGrid {
+      display: grid;
+      grid-template-columns: 40px auto;
+      .hint {
+        color: lightgreen;
+        display: block;
+        margin-left: 20px;
+        margin-top: 15px;
+        font-size: 14px;
+      }
 
-    .task {
-      color: white;
+      .bullet {
+        padding-right: 10px;
+        margin-left: 10px;
+      }
+
+      .task {
+        color: white;
+      }
     }
   }
 }

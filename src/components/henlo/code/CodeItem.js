@@ -1,6 +1,6 @@
 import React from "react";
 
-const CodeItem = ({ text, code, src }) => (
+const CodeItem = ({ text="", code="", src="" }) => (
   <>
     <div className="intro">
       <p>{text}</p>
@@ -10,9 +10,10 @@ const CodeItem = ({ text, code, src }) => (
         <code className="language-javascript">{code}</code>
       </pre>
     </div>
-    <div className="intro">
-      <p className="codeSource">Src: '{src}'</p>
+    {src && <div className="intro">
+      <p className="codeSource">Src : '{src}'</p>
     </div>
+    }
   </>
 );
 
