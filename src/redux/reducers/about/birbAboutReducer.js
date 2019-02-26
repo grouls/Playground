@@ -1,13 +1,15 @@
 import createReducer    from "../util/createReducer";
 import * as actionTypes from "../../actions/actionTypes";
 import initialState     from "./initialState";
+import { showAddBirb } from '../../actions/birbActions';
 
 // action handlers
 const actionHandlers = {
   [actionTypes.UPDATE_THE_BIRBS]    : (state, { value }) => ({ ...state, birbList: value, filteredBirbList: value }),
   [actionTypes.BIRBS_LOADING_STATUS]: (state, { value }) => ({ ...state, birbsLoadingStatus: value }),
   [actionTypes.UPDATE_BIRB_FILTER]  : (state, { value }) => ({ ...state, filter: value }),
-  [actionTypes.UPDATE_FILTERED_LIST]: (state, { value }) => ({ ...state, filteredBirbList: value })
+  [actionTypes.UPDATE_FILTERED_LIST]: (state, { value }) => ({ ...state, filteredBirbList: value }),
+  [actionTypes.SHOW_ADD_BIRB]       : (state, {value}) => ({...state, showAddBirb: value})
 };
 
 // reducer

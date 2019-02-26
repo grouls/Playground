@@ -20,6 +20,11 @@ export const updateLoadingStatus = value => ({
   value
 });
 
+export const updateShowAddBirb = value => ({
+  type: actionTypes.SHOW_ADD_BIRB,
+  value
+})
+
 export const getTheBirbs = () => async dispatch => {
   dispatch(updateLoadingStatus("loading"));
   try {

@@ -1,13 +1,14 @@
-import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import About                  from '../../components/about';
-import * as actions           from '../actions/birbActions';
+import { bindActionCreators } from "redux";
+import { connect }            from "react-redux";
+import About                  from "../../components/about";
+import * as actions           from "../actions/birbActions";
 
-export const mapStateToProps = state => ({
-  birbList           : state.about.birbList || [],
-  birbsLoadingStatus : state.about.birbsLoadingStatus || '',
-  activeFilter       : state.about.filter || '',
-  filteredBirbList    : state.about.filteredBirbList || []
+export const mapStateToProps = ({ about }) => ({
+  birbList          : about.birbList || [],
+  birbsLoadingStatus: about.birbsLoadingStatus || "",
+  activeFilter      : about.filter || "",
+  filteredBirbList   : about.filteredBirbList || [],
+  showAddBirb       : about.showAddBirb,
 });
 
 export const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
