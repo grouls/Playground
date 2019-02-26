@@ -17,6 +17,8 @@ class About extends Component {
       <InfoContainer key={birb.username} birb={birb} searchwords={searchwords}/>
     ));
   };
+  
+  addBirb = () => alert('HOOK THIS UP: ADD REDUX FORM TO ADD A NEW BIRB!');
 
   filter = e => this.props.filterBirbList(this.props.birbList, e.target.value);
 
@@ -25,7 +27,10 @@ class About extends Component {
     return (
       <div className="wrapper">
         <div className="contentBox contentBoxWide">
+        <div className="headerGrid">
           <h2 className="header">about the birbs!</h2>
+          <button className="addBirbButton" onClick={this.addBirb}>+</button>
+        </div>
           {this.props.birbsLoadingStatus === "loading" ? (
           <BirbLoader />
           ) : (
