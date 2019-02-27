@@ -1,12 +1,16 @@
-import React from "react";
+import React                from 'react';
+import Highlighter          from 'react-highlight-words';
+import { highlightClasses } from './config';
 
-const ResourceItem = ({ name, url }) => (
+const getHighlightClass = keyword => highlightClasses[keyword];
+
+const ResourceItem = ({ name, url, keyword }) => (
   <div className="resourceItemContainer">
     <p className="resourceName">
       <span className="tooltip" role="img" aria-label="birb">
         🐦
       </span>
-      {name}
+      <Highlighter highlightClassName={getHighlightClass(keyword)} searchWords={[keyword]} autoEscape={true} textToHighlight={name} />
     </p>
     <p className="resourceUrl">
       <a href={url} target="_blank" rel="noopener noreferrer">

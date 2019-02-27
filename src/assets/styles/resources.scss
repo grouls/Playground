@@ -14,6 +14,33 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    .highlight-react{
+      background: lightgreen;
+    }
+    .highlight-redux{
+      background: plum;
+    }
+    .highlight-redux-form{
+      background: lightblue;
+    }
+    .highlight-javascript{
+      background: lightseagreen;
+    }
+    .highlight-webpack{
+      background: lightcoral
+    }
+    .highlight-ES6{
+      background: lightpink
+    }
+    .highlight-testing{
+      background: palevioletred
+    }
+    .highlight-functional{
+      background: aquamarine
+    }
+    .highlight-async{
+      background: crimson
+    }
   }
   .resourceUrl {
     color: rgb(105, 215, 252);

@@ -3,7 +3,6 @@ import BirbLoader           from "../common/BirbLoader";
 import InfoContainer        from "./infoContainer";
 import AddInfoContainer     from './addInfoContainer';
 import "../../assets/styles/about.scss";
-
 class About extends Component {
   componentDidMount() {
     if (this.props.birbsLoadingStatus !== "loaded" && !this.props.birbList.length) {

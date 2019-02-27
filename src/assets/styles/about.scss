@@ -145,6 +145,10 @@
 }
 
 .addInfoContainerGrid{
+  p{
+    margin-left:30px;
+    margin-right:30px;
+  }
   .addInfoGrid{
     display: grid;
     grid-template-columns: 100px auto;
