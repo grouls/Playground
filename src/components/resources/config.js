@@ -2,7 +2,6 @@ export const resources = [
   {
     id: "resource_0",
     name: "The most important lessons I’ve learned after a year of working with React",
-    hint: "* Don't feel discouraged! *",
     url: "https://medium.freecodecamp.org/mindset-lessons-from-a-year-with-react-1de862421981",
     keyword: "react"
   },
