@@ -2,12 +2,14 @@ export const resources = [
   {
     id: "resource_0",
     name: "The most important lessons I’ve learned after a year of working with React",
+    hint: "* Don't feel discouraged! *",
     url: "https://medium.freecodecamp.org/mindset-lessons-from-a-year-with-react-1de862421981",
     keyword: "react"
   },
   {
     id: "resource_1",
     name: "the react handbook",
+    hint: "* This is essential reading IMO *",
     url: "https://medium.freecodecamp.org/the-react-handbook-b71c27b0a795",
     keyword: "react"
   },
@@ -20,6 +22,7 @@ export const resources = [
   {
     id: "resource_3",
     name: "Setting up a redux project with create react app",
+    hint: "* Used for this app. *",
     url: "https://medium.com/backticks-tildes/setting-up-a-redux-project-with-create-react-app-e363ab2329b8",
     keyword: "redux"
   },
@@ -56,6 +59,7 @@ export const resources = [
   {
     id: "resource_10",
     name: "the cost of JavaScript",
+    hint: "* One of my fav articles. *",
     url: "https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4",
     keyword: "javascript"
   },
@@ -80,6 +84,7 @@ export const resources = [
   {
     id: "resource_14",
     name: "6 Reasons Why JavaScript’s Async/Await Blows Promises Away",
+    hint: "* Have a look at the actions file getTheBirbs action for an example of Async/Await. *",
     url: "https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9",
     keyword: "async/await"
   },
@@ -98,6 +103,7 @@ export const resources = [
   {
     id: "resource_17",
     name: "Testing React with Jest and Enzyme",
+    hint: "* Useful resource for the testing tasks specified on the tasks page. *",
     url: "https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675",
     keyword: "testing"
   },
@@ -128,14 +134,30 @@ export const resources = [
   {
     id: "resource_22",
     name: "Manage React Form State with redux-form",
+    hint: "* Useful resource for the redux form tasks specified on the tasks page. *",
     url: "https://egghead.io/courses/manage-react-form-state-with-redux-form",
     keyword: "redux-form"
   },
   {
     id: "resource_23",
     name: "Getting Started With redux-form",
+    hint: "* Useful resource for the redux form tasks specified on the tasks page. *",
     url: "https://redux-form.com/8.0.4/docs/gettingstarted.md/",
     keyword: "redux-form"
+  },
+  {
+    id: "resource_24",
+    name: "How does React decide to re-render a component?",
+    hint: "* This is for class based components by utilizing the shouldComponentUpdate life cycle method. Memo can be used for pure components - See resource: 'Yeah Hooks Are Good, But Have You Tried Faster React Components?' *",
+    url: "https://lucybain.com/blog/2017/react-js-when-to-rerender/",
+    keyword: "react"
+  },
+  {
+    id: "resource_25",
+    name: "Yeah hooks are good, but have you tried faster React Components?",
+    hint: "* Performance tricks for pure components *",
+    url: "https://medium.com/@siffogh3/yeah-hooks-are-good-but-have-you-tried-faster-react-components-e698a8db468c",
+    keyword: "react"
   },
 ];
 

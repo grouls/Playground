@@ -1,4 +1,4 @@
-import React         from 'react';
+import React, { useCallback }         from 'react';
 import ContentBoxOne from './contentBoxes/contentBoxOne';
 import ContentBoxTwo from './contentBoxes/contentBoxTwo';
 import '../../assets/styles/henlo.scss';
@@ -7,8 +7,9 @@ import '../../assets/styles/prism.css';
 
 const Henlo = ({ showTheBirbs, showHenloCode, displayBirbs, showCode }) => {
 
-  const displayHelper  = () => displayBirbs(!showTheBirbs);
-  const showCodeHelper = () => showHenloCode(!showCode);
+  //useCallBack will only recreate the fn if the provided props change
+  const displayHelper  = useCallback(() => displayBirbs(!showTheBirbs), [showTheBirbs]);
+  const showCodeHelper = useCallback(() => showHenloCode(!showCode), [showCode]);
 
   return (
     <div className="henloWrapper">

@@ -4,7 +4,7 @@ import { highlightClasses } from './config';
 
 const getHighlightClass = keyword => highlightClasses[keyword];
 
-const ResourceItem = ({ name, url, keyword }) => (
+const ResourceItem = ({ name, url, keyword, hint }) => (
   <div className="resourceItemContainer">
     <p className="resourceName">
       <span className="tooltip" role="img" aria-label="birb">
@@ -12,6 +12,10 @@ const ResourceItem = ({ name, url, keyword }) => (
       </span>
       <Highlighter highlightClassName={getHighlightClass(keyword)} searchWords={[keyword]} autoEscape={true} textToHighlight={name} />
     </p>
+    { hint && <p className="hint">
+      {hint}
+    </p> 
+    }
     <p className="resourceUrl">
       <a href={url} target="_blank" rel="noopener noreferrer">
         {url}

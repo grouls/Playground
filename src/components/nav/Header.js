@@ -1,9 +1,9 @@
-import React   from 'react';
-import {Link } from 'react-router-dom';
-import birb    from "../../assets/images/birb.gif";
+import React, { memo } from 'react';
+import {Link }         from 'react-router-dom';
+import birb            from "../../assets/images/birb.gif";
 import "../../assets/styles/header.scss";
 
-const Header = () => (
+const Header = memo(() => (
     <div className="headerNav">
     <img className="birb" src={birb} alt="I'm a birb yo!" />
     <div className="headerWrapper">
@@ -21,6 +21,6 @@ const Header = () => (
       </div>
     </div>
   </div>
-)
+));
 
 export default Header;

@@ -4,7 +4,7 @@ import ResourceItem  from "./ResourceItem";
 import Header        from "../common/Header";
 import "../../assets/styles/resources.scss";
 
-const items = resources.map(r => <ResourceItem key={r.id} name={r.name} url={r.url} keyword={r.keyword} />);
+const items = resources.map(r => <ResourceItem key={r.id} name={r.name} url={r.url} keyword={r.keyword} hint={r.hint} />);
 
 const Resources = () => (
   <div className="wrapper">
