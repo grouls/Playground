@@ -1,6 +1,7 @@
 import React          from "react";
 import TaskItem       from "./TaskItem";
-import { TaskConfig }  from  "./config";
+import { TaskConfig }  from "./config";
+import Header         from "../common/Header";
 import "../../assets/styles/tasks.scss";
 
 const taskRows = TaskConfig.map(({id, task, hint, text, code}) => 
@@ -10,7 +11,7 @@ const taskRows = TaskConfig.map(({id, task, hint, text, code}) =>
 const Tasks = () => (
   <div className="wrapper">
     <div className="contentBox">
-      <h2 className="header">Birb Tasks</h2>
+      <Header text="Birb Tasks" />
       <div className="tasksContainer">
         {taskRows}
       </div>

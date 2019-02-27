@@ -1,6 +1,6 @@
 import React         from 'react';
-import ContentBoxOne from './contentBoxes/ContentBoxOne';
-import ContentBoxTwo from './contentBoxes/ContentBoxTwo';
+import ContentBoxOne from './contentBoxes/contentBoxOne';
+import ContentBoxTwo from './contentBoxes/contentBoxTwo';
 import '../../assets/styles/henlo.scss';
 import '../../assets/styles/prism.css';
 
@@ -9,7 +9,7 @@ const Henlo = ({ showTheBirbs, showHenloCode, displayBirbs, showCode }) => {
 
   const displayHelper  = () => displayBirbs(!showTheBirbs);
   const showCodeHelper = () => showHenloCode(!showCode);
-  
+
   return (
     <div className="henloWrapper">
       <ContentBoxOne />

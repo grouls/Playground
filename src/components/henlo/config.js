@@ -84,3 +84,9 @@ export const codeConfig = [
     src : "/redux/reducers/henlo/birbHenloReducer.js"
   }
 ];
+
+export const actionText = "A simple hide / show example to demonstrate dispatching an action passed down to a component as a prop from a container. The reducer responsible for the dispatched action will respond and specify how to update the applications state. "
+
+export const devToolsText = "If you check your redux dev tools you will see the SHOW_THE_BIRBS action, along with the store changes caused by the henlo reducer.";
+
+export const githubURL = "https://github.com/joefads/Playground";

@@ -1,6 +1,7 @@
 import React         from "react";
 import { resources } from "./config";
 import ResourceItem  from "./ResourceItem";
+import Header        from "../common/Header";
 import "../../assets/styles/resources.scss";
 
 const items = resources.map(r => <ResourceItem key={r.id} name={r.name} url={r.url} keyword={r.keyword} />);
@@ -8,7 +9,7 @@ const items = resources.map(r => <ResourceItem key={r.id} name={r.name} url={r.u
 const Resources = () => (
   <div className="wrapper">
     <div className="contentBox">
-      <h2 className="header">Resources</h2>
+      <Header text="Resources" />
       {items}
     </div>
   </div>

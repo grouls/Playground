@@ -1,6 +1,6 @@
 import React          from "react";
 import TechItem       from "./TechItem";
-import { techConfig }  from "../config";
+import { techConfig } from  "../config";
 
 const techRows = techConfig.map(item => <TechItem key={item.type} item={item} />);
 
