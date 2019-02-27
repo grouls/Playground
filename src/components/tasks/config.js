@@ -72,6 +72,25 @@ const codeItems = {
       });
     });
   });
+  `,
+  task_5 : `
+  ..
+  ....
+
+  const Memes = () => (
+    <div className="wrapper">
+      <div className="contentBox">
+        <Header text="Memes" />
+        <div className="memesContainer">
+          // add some memes here generated from a memes config map for example. Have a look at the tasks component.
+          {memeRows}
+        </div>
+      </div>
+    </div>
+  );
+
+  ....
+  ..
   `
 };
 
@@ -99,12 +118,28 @@ export const TaskConfig = [
   },
   {
     id: "task_3",
-    task: "Add custom inputs with error styling to the existing redux form fields.",
-    hint: "Redux fields have a component prop for this."
+    task: "Inside nav/Header.js create a nav item component to break up the JSX into a reusable component.",
+    hint: "Consider creating a header config and mapping over it to return nav items components."
   },
   {
     id: "task_4",
+    task: "Create a new nav item for a 'meme' page.",
+    hint: "You can add this to your newly created header config. You will also need to add in your meme page route in src/App.js"
+  },
+  {
+    id: "task_5",
+    task: "Add the following code block, where commented add your own set of memes.",
+    hint: "Try add a new style sheet for a meme page and give your 'memesContainer' some css grid styles. Once you've added the grid styles, you can visualize the grid by inspecting the container.",
+    code: getCode("task_5")
+  },
+  {
+    id: "task_6",
+    task: "Add custom inputs with error styling to the existing redux form fields.",
+    hint: "Redux fields have a component prop for this, look at the resource section for redux docs support."
+  },
+  {
+    id: "task_7",
     task: "Add validation to the redux form fields.",
-    hint: "Check out the redux docs for field level validation & custom field components."
-  }
+    hint: "Check out the redux docs link in the resources section for field level validation & custom field components."
+  },
 ];
