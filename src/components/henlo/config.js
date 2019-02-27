@@ -2,6 +2,9 @@ import react       from "../../assets/images/react.png";
 import redux       from "../../assets/images/redux.png";
 import cssGrid     from "../../assets/images/cssgrid.png";
 import reactRouter from "../../assets/images/reactRouter.png";
+import reduxForm   from "../../assets/images/reduxForm.png";
+import prismJS     from "../../assets/images/prismjs.png";
+import highlight   from "../../assets/images/reactHighlightWords.png";
 
 export const techConfig = [
   {
@@ -23,10 +26,28 @@ export const techConfig = [
     url: "https://redux.js.org/"
   },
   {
+    type: "redux-form",
+    text: "Redux Form",
+    img: reduxForm,
+    url: "https://redux-form.com/8.1.0/"
+  },
+  {
     type: "cssGrid",
     text: "CSS Grid",
     img: cssGrid,
     url: "https://css-tricks.com/snippets/css/complete-guide-grid/"
+  },
+  {
+    type: "prismJS",
+    text: "Prism JS",
+    img: prismJS,
+    url: "https://prismjs.com/"
+  },
+  {
+    type: "reactHighlightWords",
+    text: "React Highlight Words",
+    img: highlight,
+    url: "https://github.com/bvaughn/react-highlight-words"
   }
 ];
 
