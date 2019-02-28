@@ -9,12 +9,12 @@
   grid-column-end: 3;
   .intro {
     margin-right: 20px;
-    a{
+    a {
       text-decoration: none;
       color: goldenrod;
     }
-    a:hover{
-      color:rgb(245, 192, 57)
+    a:hover {
+      color: rgb(245, 192, 57);
     }
   }
   .techContainer {
@@ -39,6 +39,25 @@
       }
     }
   }
+  .extensionGridContainer {
+    display: grid;
+    padding: 30px;
+    background: #2b333c;
+    margin: 30px;
+    border-radius: 30px;
+    p {
+      color: white;
+      .extensionInfo {
+        color: lightgreen;
+      } 
+      a {
+        color: rgb(43, 193, 243);
+      }
+      a:hover {
+        color: rgb(146, 228, 255);
+      }
+    }
+  }
 }
 
 .contentBox_2 {
@@ -55,12 +74,12 @@
       width: 100%;
     }
   }
-  .dev_tools{
+  .dev_tools {
     width: 100%;
     height: 100%;
     padding-bottom: 20px;
   }
-  .codeSource{
+  .codeSource {
     opacity: 0.7;
     font-size: 11px;
     text-align: center;
