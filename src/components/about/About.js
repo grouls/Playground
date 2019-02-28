@@ -1,9 +1,9 @@
-import React, { Component }  from "react";
-import BirbLoader            from "../common/BirbLoader";
-import InfoContainer         from "./infoContainer";
-import AddInfoContainer      from "./addInfoContainer";
-import Intro                 from "../common/Intro";
-import { fetchURL,asyncURL } from "./config";
+import React, { Component } from "react";
+import BirbLoader from "../common/BirbLoader";
+import InfoContainer from "./infoContainer";
+import AddInfoContainer from "./addInfoContainer";
+import Intro from "../common/Intro";
+import { fetchURL, asyncURL } from "./config";
 import "../../assets/styles/about.scss";
 
 class About extends Component {
@@ -29,9 +29,9 @@ class About extends Component {
   filter = e => this.props.filterBirbList(this.props.birbList, e.target.value);
 
   render() {
-    const birbRows    = this.getRows();
+    const birbRows = this.getRows();
     const displayText = this.props.showAddBirb ? "-" : "+";
- 
+
     if (this.props.birbsLoadingStatus === "loading") {
       return (
         <div className="wrapper">
@@ -74,23 +74,28 @@ class About extends Component {
             </button>
           </div>
           <>
-            <Intro>
-              <p>
-                A simple example to showcase using
-                <a className="fetchURL" href={fetchURL} target="_blank" rel="noopener noreferrer">
-                 {" "}Fetch{" "}
-                </a>
-                in an action with 
-                <a className="fetchURL" href={asyncURL} target="_blank" rel="noopener noreferrer">
-                 {" "}Async/Await
-                </a>. Dispatching actions to store the json response & update the loading status before the reducer updates our store.
-              </p>
-              <p>
-                The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a promise that resolves to the response to that request, whether it is
-                successful or not. You can also optionally pass in an init options object as the second argument.{" "}
-              </p>
-              <p>I've also added some filtering, check out the filter actions too!</p>
-            </Intro>
+            <div className="introContainer">
+              <Intro>
+                <p>
+                  A simple example to showcase using
+                  <a className="fetchURL" href={fetchURL} target="_blank" rel="noopener noreferrer">
+                    {" "}
+                    Fetch{" "}
+                  </a>
+                  in an action with
+                  <a className="fetchURL" href={asyncURL} target="_blank" rel="noopener noreferrer">
+                    {" "}
+                    Async/Await
+                  </a>
+                  . Dispatching actions to store the json response & update the loading status before the reducer updates our store.
+                </p>
+                <p>
+                  The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a promise that resolves to the response to that request, whether it is
+                  successful or not. You can also optionally pass in an init options object as the second argument.{" "}
+                </p>
+                <p>I've also added some filtering, check out the filter actions too!</p>
+              </Intro>
+            </div>
             <input className="filterInput" placeholder="\/^v^\/" onChange={this.filter} />
             <div className="aboutContainer">{birbRows}</div>
           </>
