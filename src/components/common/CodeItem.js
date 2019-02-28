@@ -1,19 +1,21 @@
 import React from "react";
+import Intro from "./Intro";
 
-const CodeItem = ({ text="", code="", src="" }) => (
+const CodeItem = ({ text = "", code = "", src = "" }) => (
   <>
-    <div className="intro">
+    <Intro>
       <p>{text}</p>
-    </div>
+    </Intro>
     <div className="codeContainer">
       <pre>
         <code className="language-javascript">{code}</code>
       </pre>
     </div>
-    {src && <div className="intro">
-      <p className="codeSource">Src : '{src}'</p>
-    </div>
-    }
+    {src && (
+      <Intro>
+        <p className="codeSource">Src : '{src}'</p>
+      </Intro>
+    )}
   </>
 );
 
