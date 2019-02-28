@@ -117,19 +117,23 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  .filterInput {
-    height: 30px;
-    width: 90%;
-    justify-self: center;
-    border-radius: 10px;
-    background-color: whitesmoke;
-    outline: none;
-    text-align: center;
-    font-weight: bold;
-    color: #2b333c;
-    font-size: 13px;
-    font-family: monospace;
+  .filterInput{
+    margin: 40px;
   }
+}
+
+.filterInput {
+  height: 30px;
+  width: 90%;
+  justify-self: center;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  color: #2b333c;
+  font-size: 13px;
+  font-family: monospace;
 }
 
 a {
@@ -146,8 +150,12 @@ a:hover {
   width: 30px;
 }
 
-.introContainer{
- padding-right: 40px;
+.introContainer {
+  padding-right: 40px;
+}
+
+form {
+  margin: 40px;
 }
 
 .addBirbButton {
