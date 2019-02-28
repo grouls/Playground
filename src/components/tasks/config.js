@@ -91,6 +91,45 @@ const codeItems = {
 
   ....
   ..
+  `,
+  task_8: `
+  ....
+  ..
+
+  if (this.props.birbsLoadingStatus === "loading") {
+    return (
+      <div className="wrapper">
+        <div className="contentBox contentBoxLoader">
+          <div className="headerGrid">
+            <h2 className="header">about the birbs!</h2>
+            <button className="addBirbButton" onClick={this.addBirb}>
+              {displayText}
+            </button>
+          </div>
+          <BirbLoader />
+        </div>
+      </div>
+    );
+  }
+
+  if (this.props.showAddBirb) {
+    return (
+      <div className="wrapper">
+        <div className="contentBox contentBoxLoader">
+          <div className="headerGrid">
+            <h2 className="header">about the birbs!</h2>
+            <button className="addBirbButton" onClick={this.addBirb}>
+              {displayText}
+            </button>
+          </div>
+          <AddInfoContainer addNewBirb={this.addNewBirb} />
+        </div>
+      </div>
+    );
+  }
+
+  ....
+  ..
   `
 };
 
@@ -142,4 +181,11 @@ export const TaskConfig = [
     task: "Add validation to the redux form fields.",
     hint: "Check out the redux docs link in the resources section for field level validation & custom field components."
   },
+  {
+    id: "task_8",
+    task: "Break up the repetitive chunks of JSX in the return statements on the about page into reusable components.",
+    hint: "There are common pieces of JSX on the about page, for example: ",
+    code: getCode("task_8")
+  },
+  
 ];
