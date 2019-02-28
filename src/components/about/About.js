@@ -82,8 +82,8 @@ class About extends Component {
                 </a>
                 in an action with 
                 <a className="fetchURL" href={asyncURL} target="_blank" rel="noopener noreferrer">
-                 {" "}Async/Await{" "}
-                </a>.Dispatching an action to store the json response and updating state with a reducer.
+                 {" "}Async/Await
+                </a>. Dispatching actions to store the json response & update the loading status before the reducer updates our store.
               </p>
               <p>
                 The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a promise that resolves to the response to that request, whether it is
