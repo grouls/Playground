@@ -45,17 +45,22 @@
     background: #2b333c;
     margin: 30px;
     border-radius: 30px;
-    p {
+    p {      
       color: white;
       .extensionInfo {
         color: lightgreen;
-      } 
+      }
       a {
         color: rgb(43, 193, 243);
       }
       a:hover {
         color: rgb(146, 228, 255);
       }
+    }
+    .extensionURL{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 }
