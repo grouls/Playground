@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import BirbLoader           from "../common/BirbLoader";
-import InfoContainer        from "./infoContainer";
-import AddInfoContainer     from './addInfoContainer';
+import BirbLoader from "../common/BirbLoader";
+import InfoContainer from "./infoContainer";
+import AddInfoContainer from "./addInfoContainer";
+import Intro from "../common/Intro";
 import "../../assets/styles/about.scss";
 class About extends Component {
   componentDidMount() {
@@ -12,16 +13,14 @@ class About extends Component {
 
   getRows = () => {
     const searchwords = this.props.activeFilter.split(" ");
-    return this.props.filteredBirbList.map(birb => (
-      <InfoContainer key={birb.username} birb={birb} searchwords={searchwords}/>
-    ));
+    return this.props.filteredBirbList.map(birb => <InfoContainer key={birb.username} birb={birb} searchwords={searchwords} />);
   };
 
   addNewBirb = values => {
     // create a new array that joins old list with new birb object - wrapped in an array.
     const birbs = [...this.props.birbList, ...[values]];
     this.props.addNewBirb(birbs);
-  }
+  };
 
   addBirb = () => this.props.updateShowAddBirb(!this.props.showAddBirb);
 
@@ -29,25 +28,61 @@ class About extends Component {
 
   render() {
     const birbRows = this.getRows();
-    const displayText = this.props.showAddBirb ? '-' : '+';
+    const displayText = this.props.showAddBirb ? "-" : "+";
+
+    if (this.props.birbsLoadingStatus === "loading") {
+      return (
+        <div className="wrapper">
+          <div className="contentBox contentBoxLoader">
+            <div className="headerGrid">
+              <h2 className="header">about the birbs!</h2>
+              <button className="addBirbButton" onClick={this.addBirb}>
+                {displayText}
+              </button>
+            </div>
+            <BirbLoader />
+          </div>
+        </div>
+      );
+    }
+
+    if (this.props.showAddBirb) {
+      return (
+        <div className="wrapper">
+          <div className="contentBox contentBoxLoader">
+            <div className="headerGrid">
+              <h2 className="header">about the birbs!</h2>
+              <button className="addBirbButton" onClick={this.addBirb}>
+                {displayText}
+              </button>
+            </div>
+            <AddInfoContainer addNewBirb={this.addNewBirb} />
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="wrapper">
         <div className="contentBox contentBoxWide">
-        <div className="headerGrid">
-          <h2 className="header">about the birbs!</h2>
-          <button className="addBirbButton" onClick={this.addBirb}>{displayText}</button>
-        </div>
-          {this.props.birbsLoadingStatus === "loading" ? (
-          <BirbLoader />
-          ) : (
-            this.props.showAddBirb ? 
-            <AddInfoContainer addNewBirb={this.addNewBirb}/>
-            :
-            <>
-              <input className="filterInput" placeholder="\/^v^\/" onChange={this.filter} />
-              <div className="aboutContainer">{birbRows}</div>
-            </>
-          )}
+          <div className="headerGrid">
+            <h2 className="header">about the birbs!</h2>
+            <button className="addBirbButton" onClick={this.addBirb}>
+              {displayText}
+            </button>
+          </div>
+          <>
+            <Intro>
+              <p>A simple example to showcase using Fetch in an action with async/await. Dispatching an action to store the json response and updating state with a reducer.</p>
+              <p>
+                The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a promise that resolves to the response to that request, whether it is
+                successful or not. You can also optionally pass in an init options object as the second argument.{" "}
+              </p>
+              <p>I've also added some filtering, check out the filter actions too!</p>
+            </Intro>
+            <input className="filterInput" placeholder="\/^v^\/" onChange={this.filter} />
+            <div className="aboutContainer">{birbRows}</div>
+          </>
         </div>
       </div>
     );

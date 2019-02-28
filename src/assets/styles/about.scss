@@ -70,23 +70,10 @@
   }
 }
 
-.contentBoxWide {
+.contentBoxLoader{
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100px 50px auto;
-  .filterInput {
-    height: 30px;
-    width: 90%;
-    justify-self: center;
-    border-radius: 10px;
-    background-color: whitesmoke;
-    outline: none;
-    text-align: center;
-    font-weight: bold;
-    color: #2b333c;
-    font-size: 13px;
-    font-family: monospace;
-  }
+  grid-template-rows: 100px 60px auto;
   .loadingContainer {
     justify-self: center;
     grid-template-columns: 100%;
@@ -123,6 +110,25 @@
       text-transform: uppercase;
       letter-spacing: 4px;
     }
+  }
+}
+
+.contentBoxWide {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  .filterInput {
+    height: 30px;
+    width: 90%;
+    justify-self: center;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    color: #2b333c;
+    font-size: 13px;
+    font-family: monospace;
   }
 }
 
