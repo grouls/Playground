@@ -19,7 +19,7 @@ class Code extends Component {
       <>
         {this.getItems()}
         <Intro>
-         <p>{devToolsText}/</p>
+          <p>{devToolsText}/</p>
         </Intro>
         <div className="codeContainer">
           <img src={dev_tools} className="dev_tools" alt="dev tools" />
