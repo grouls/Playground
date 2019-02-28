@@ -1,12 +1,19 @@
-import React from "react";
+import React                from "react";
 import { Field, reduxForm } from "redux-form";
+import { reduxFormUrl }     from "../config";
 
 let AddBirbForm = props => {
   const { handleSubmit } = props;
   return (
     <div className="addInfoContainerGrid">
-      <p>This is an example of redux form in its simplest design, the form has no validation and could be improved a lot. 
-      Visit the tasks & resources page to learn more about improving this redux form.</p>
+      <p>
+        This is an example of
+        <a className="fetchURL" href={reduxFormUrl} target="_blank" rel="noopener noreferrer">
+          {" "}
+          Redux Form{" "}
+        </a>{" "}
+        in its simplest design, the form has no validation and could be improved a lot. Visit the tasks & resources page to learn more about improving this redux form.
+      </p>
       <form onSubmit={handleSubmit}>
         <div className="addInfoGrid">
           <label htmlFor="username">User</label>

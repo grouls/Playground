@@ -1,9 +1,11 @@
-import React, { Component } from "react";
-import BirbLoader from "../common/BirbLoader";
-import InfoContainer from "./infoContainer";
-import AddInfoContainer from "./addInfoContainer";
-import Intro from "../common/Intro";
+import React, { Component }  from "react";
+import BirbLoader            from "../common/BirbLoader";
+import InfoContainer         from "./infoContainer";
+import AddInfoContainer      from "./addInfoContainer";
+import Intro                 from "../common/Intro";
+import { fetchURL,asyncURL } from "./config";
 import "../../assets/styles/about.scss";
+
 class About extends Component {
   componentDidMount() {
     if (this.props.birbsLoadingStatus !== "loaded" && !this.props.birbList.length) {
@@ -27,9 +29,9 @@ class About extends Component {
   filter = e => this.props.filterBirbList(this.props.birbList, e.target.value);
 
   render() {
-    const birbRows = this.getRows();
+    const birbRows    = this.getRows();
     const displayText = this.props.showAddBirb ? "-" : "+";
-
+ 
     if (this.props.birbsLoadingStatus === "loading") {
       return (
         <div className="wrapper">
@@ -73,7 +75,16 @@ class About extends Component {
           </div>
           <>
             <Intro>
-              <p>A simple example to showcase using Fetch in an action with async/await. Dispatching an action to store the json response and updating state with a reducer.</p>
+              <p>
+                A simple example to showcase using
+                <a className="fetchURL" href={fetchURL} target="_blank" rel="noopener noreferrer">
+                 {" "}Fetch{" "}
+                </a>
+                in an action with 
+                <a className="fetchURL" href={asyncURL} target="_blank" rel="noopener noreferrer">
+                 {" "}Async/Await{" "}
+                </a>.Dispatching an action to store the json response and updating state with a reducer.
+              </p>
               <p>
                 The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a promise that resolves to the response to that request, whether it is
                 successful or not. You can also optionally pass in an init options object as the second argument.{" "}
