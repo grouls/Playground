@@ -45,11 +45,24 @@
     background: #2b333c;
     margin: 30px;
     border-radius: 30px;
-    p {      
-      color: white;
-      .extensionInfo {
-        color: lightgreen;
+
+    .vscodeGrid{
+      display: grid;
+      grid-template-columns: 110px auto;
+      .vscode {
+        justify-self: start;
+        align-self: center;
+        img {
+          height: 35px;
+          width: 35px;
+        }
       }
+    }
+    .extensionInfo {
+      color: lightgreen;
+    }
+    p {
+      color: white;
       a {
         color: rgb(43, 193, 243);
       }
@@ -57,7 +70,7 @@
         color: rgb(146, 228, 255);
       }
     }
-    .extensionURL{
+    .extensionURL {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;

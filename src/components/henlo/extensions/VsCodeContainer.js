@@ -2,7 +2,6 @@ import React                from "react";
 import VsCodeItem           from "./VsCodeItem";
 import { extensionsConfig }  from "../config";
 import Header               from "../../common/Header";
-
 const extensionRows = extensionsConfig.map(item => <VsCodeItem key={item.id} item={item} />);
 
 const VSCodeContainer = () => (
