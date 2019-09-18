@@ -1,24 +1,16 @@
-import React, { memo } from 'react';
-import {Link }         from 'react-router-dom';
-import birb            from "../../assets/images/birb.gif";
+import React, { memo } from "react";
+import birb from "../../assets/images/birb.gif";
 import "../../assets/styles/header.scss";
+import HeaderItem from "../common/HeaderItem";
 
 const Header = memo(() => (
-    <div className="headerNav">
+  <div className="headerNav">
     <img className="birb" src={birb} alt="I'm a birb yo!" />
     <div className="headerWrapper">
-      <div className="navItem">
-        <Link to="/home">Home</Link>
-      </div>
-      <div className="navItem">
-        <Link to="/about">About</Link>
-      </div>
-      <div className="navItem">
-        <Link to="/tasks">Tasks</Link>
-      </div>
-      <div className="navItem">
-        <Link to="/resources">Resources</Link>
-      </div>
+      <HeaderItem title="home" link="/home" />
+      <HeaderItem title="about" link="/about" />
+      <HeaderItem title="tasks" link="/tasks" />
+      <HeaderItem title="resources" link="/resources" />
     </div>
   </div>
 ));
